@@ -23,7 +23,7 @@ function WeekDayOrder({
   isOrdered,
 }) {
   const auth = getAuth();
-  const [orders, setOrders] = useState(null);
+  const [orders, setOrders] = useState([]);
   const [orderMade, setOrderMade] = useState(false);
   const [formData, setFormData] = useState({
     no1: 0,
@@ -55,7 +55,7 @@ function WeekDayOrder({
 
         setOrders(orderInfo);
         orders.map((order, i) => {
-          if (isEqual(order.data.date.toDate(), dayDate)) {
+          if (isEqual(order.data.date.toDate(), dayDate.toDate())) {
             return setOrderMade(true);
           }
 
@@ -97,11 +97,8 @@ function WeekDayOrder({
       await addDoc(collection(db, "order"), formData);
     } catch (error) {
       toast.error("Something went wrong");
-      console.log(error);
     }
   };
-
-  /* console.log(formData); */
 
   return (
     <>
