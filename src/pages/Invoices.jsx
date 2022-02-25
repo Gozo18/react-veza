@@ -82,11 +82,13 @@ function Invoices() {
           </p>
 
           {orders.map((order, i) => {
-            if (isEqual(order.data.date.toDate(), value)) {
+            const orderTime = order.data.date.toDate().toLocaleDateString();
+            const valueTime = value.toLocaleDateString();
+            if (orderTime === valueTime) {
               return <OrderItem order={order.data} key={i} />;
             }
 
-            return <></>;
+            return <div key={i}></div>;
           })}
         </main>
       ) : (
@@ -94,12 +96,6 @@ function Invoices() {
           <p>No orders made</p>
         </div>
       )}
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </div>
   );
 }

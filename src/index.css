@@ -27,6 +27,10 @@ button {
   border: none;
 }
 
+main {
+  margin-bottom: 105px;
+}
+
 .input,
 .passwordInput,
 .emailInput,
@@ -877,15 +881,65 @@ button {
 }
 
 .weekItemText {
+  display: flex;
+  align-items: center;
   width: 100%;
+  height: 34px;
 }
 
 .weekItemPrice {
-  width: 70%;
+  display: flex;
+  align-items: center;
+  width: 60%;
+  height: 34px;
 }
 
 .weekItemInput {
-  width: 25%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  height: 34px;
+}
+
+.weekItemInput input {
+  width: 50%;
+  height: 100%;
+  border: 0;
+  background: #f2f4f8;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.itemMinus,
+.itemPlus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  height: 34px;
+  background: #00cc66;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.weekDayButtonBox {
+  margin: 2rem 0 1rem;
+}
+
+.weekDayButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 34px;
+  background-color: #00cc66;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 /* View orders */
@@ -954,4 +1008,20 @@ button {
 
 .react-calendar__tile--now {
   background: #ffeaaf !important;
+}
+
+/* Profile */
+.profileBox {
+  padding: 20px 10px;
+  background: #ffffff;
+}
+
+.profileBox input {
+  margin: 10px 0;
+  padding: 0 20px;
+  width: 100%;
+  height: 45px;
+  border: 0;
+  background: #f2f4f8;
+  border-radius: 5px;
 }

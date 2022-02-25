@@ -8,10 +8,9 @@ import WeekDayOrder from "../components/WeekDayOrder";
 function Order() {
   const [weekOffer, setWeekOffer] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [viewMo, setViewMo] = useState(true);
-  const [viewTu, setViewTu] = useState(false);
 
   useEffect(() => {
+    let abortController = new AbortController();
     const fetchWeek = async () => {
       const docRef = doc(db, "weekOffer", "YwOhkLKiCKTXkgJbQZXV");
       const docSnap = await getDoc(docRef);
@@ -26,6 +25,7 @@ function Order() {
     };
 
     fetchWeek();
+    abortController.abort();
   }, []);
 
   if (loading) {
@@ -50,14 +50,8 @@ function Order() {
 
       <main>
         <ul className='weekBox'>
-          <li
-            className='weekDay'
-            onClick={() => {
-              setViewMo((prevState) => !prevState);
-            }}
-          >
-            <b>Monday {moDate}</b>
-            {/*  {viewMo ? ( */}
+          <li className='weekDay'>
+            <h4>Monday {moDate}</h4>
             <WeekDayOrder
               dayDate={weekOffer.DateMo}
               no1Name={weekOffer.Mo1}
@@ -72,20 +66,10 @@ function Order() {
               priceNo4={weekOffer.priceMo4}
               priceNo5={weekOffer.priceMo5}
               priceNo6={weekOffer.priceMo6}
-              isOrdered={false}
             />
-            {/*  ) : (
-              ""
-            )} */}
           </li>
-          <li
-            className='weekDay'
-            onClick={() => {
-              setViewTu((prevState) => !prevState);
-            }}
-          >
-            <b>Tuesday {tuDate}</b>
-            {/* {viewTu ? ( */}
+          <li className='weekDay'>
+            <h4>Tuesday {tuDate}</h4>
             <WeekDayOrder
               dayDate={weekOffer.DateTu}
               no1Name={weekOffer.Tu1}
@@ -100,15 +84,10 @@ function Order() {
               priceNo4={weekOffer.priceTu4}
               priceNo5={weekOffer.priceTu5}
               priceNo6={weekOffer.priceTu6}
-              isOrdered={false}
             />
-            {/* ) : (
-              ""
-            )} */}
           </li>
           <li className='weekDay'>
-            <b>Wednesday {weDate}</b>
-            {/* {viewTu ? ( */}
+            <h4>Wednesday {weDate}</h4>
             <WeekDayOrder
               dayDate={weekOffer.DateWe}
               no1Name={weekOffer.We1}
@@ -123,15 +102,10 @@ function Order() {
               priceNo4={weekOffer.priceWe4}
               priceNo5={weekOffer.priceWe5}
               priceNo6={weekOffer.priceWe6}
-              isOrdered={false}
             />
           </li>
-          {/* ) : (
-              ""
-            )} */}
           <li className='weekDay'>
-            <b>Thursday {thDate}</b>
-            {/* {viewTu ? ( */}
+            <h4>Thursday {thDate}</h4>
             <WeekDayOrder
               dayDate={weekOffer.DateTh}
               no1Name={weekOffer.Th1}
@@ -146,12 +120,10 @@ function Order() {
               priceNo4={weekOffer.priceTh4}
               priceNo5={weekOffer.priceTh5}
               priceNo6={weekOffer.priceTh6}
-              isOrdered={false}
             />
           </li>
           <li className='weekDay'>
-            <b>Friday {frDate}</b>
-            {/* {viewTu ? ( */}
+            <h4>Friday {frDate}</h4>
             <WeekDayOrder
               dayDate={weekOffer.DateFr}
               no1Name={weekOffer.Fr1}
@@ -166,12 +138,10 @@ function Order() {
               priceNo4={weekOffer.priceFr4}
               priceNo5={weekOffer.priceFr5}
               priceNo6={weekOffer.priceFr6}
-              isOrdered={false}
             />
           </li>
           <li className='weekDay'>
-            <b>Saturday {saDate}</b>
-            {/* {viewTu ? ( */}
+            <h4>Saturday {saDate}</h4>
             <WeekDayOrder
               dayDate={weekOffer.DateSa}
               no1Name={weekOffer.Sa1}
@@ -186,12 +156,10 @@ function Order() {
               priceNo4={weekOffer.priceSa4}
               priceNo5={weekOffer.priceSa5}
               priceNo6={weekOffer.priceSa6}
-              isOrdered={false}
             />
           </li>
           <li className='weekDay'>
-            <b>Sunday {suDate}</b>
-            {/* {viewTu ? ( */}
+            <h4>Sunday {suDate}</h4>
             <WeekDayOrder
               dayDate={weekOffer.DateSu}
               no1Name={weekOffer.Su1}
@@ -206,17 +174,9 @@ function Order() {
               priceNo4={weekOffer.priceSu4}
               priceNo5={weekOffer.priceSu5}
               priceNo6={weekOffer.priceSu6}
-              isOrdered={false}
             />
           </li>
         </ul>
-
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
       </main>
     </div>
   );

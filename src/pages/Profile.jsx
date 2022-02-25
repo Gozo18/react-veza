@@ -1,106 +1,69 @@
 import { useState, useEffect } from "react";
-import { getAuth, updateProfile } from "firebase/auth";
-import {
-  collection,
-  getDocs,
-  doc,
-  updateDoc,
-  query,
-  where,
-  getDoc,
-} from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import Spinner from "../components/Spinner";
+import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 
 function Profile() {
   const auth = getAuth();
   const [loading, setLoading] = useState(true);
-  const [user, setUser] = useState(null);
-  const [changeDetails, setChangeDetails] = useState(false);
-  const [formData, setFormData] = useState({
-    name: auth.currentUser.displayName,
-    email: auth.currentUser.email,
-  });
-
-  const { name, email } = formData;
+  const [user, setUser] = useState();
 
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUser = async () => {
-      const docRef = doc(db, "users", auth.currentUser.uid);
-      const docSnap = await getDoc(docRef);
+      try {
+        const docRef = doc(db, "users", auth.currentUser.uid);
+        const docSnap = await getDoc(docRef);
 
-      if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
-      } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
+        const userInfo = docSnap.data();
+
+        setUser(userInfo);
+        setLoading(false);
+      } catch (error) {
+        toast.error("Could not fetch user!");
       }
-
-      const usersRef = collection(db, "users");
-
-      console.log(usersRef);
-
-      const q = query(usersRef, where("userRef", "==", auth.currentUser.uid));
-
-      console.log(q);
-
-      const querySnap = await getDocs(q);
-
-      console.log(querySnap);
-
-      let userInfo = [];
-
-      querySnap.forEach((doc) => {
-        return userInfo.push({
-          id: doc.id,
-          data: doc.data(),
-        });
-      });
-
-      console.log(userInfo);
-
-      setUser(userInfo);
-      setLoading(false);
     };
 
     fetchUser();
   }, [auth.currentUser.uid]);
-
-  console.log(user);
 
   const onLogout = () => {
     auth.signOut();
     navigate("/sign-in");
   };
 
-  const onSubmit = async () => {
-    try {
-      if (auth.currentUser.displayName !== name) {
-        // Update display name in firebase
-        await updateProfile(auth.currentUser, {
-          displayName: name,
-        });
+  const onSubmit = async (e) => {
+    e.preventDefault();
 
-        // Update in firestore
-        const userRef = doc(db, "users", auth.currentUser.uid);
-        await updateDoc(userRef, {
-          name,
-        });
-      }
+    try {
+      await setDoc(doc(db, "users", auth.currentUser.uid), {
+        name: user.name,
+        street: user.street,
+        town: user.town,
+        psc: user.psc,
+        phone: user.phone,
+      });
+      toast.success("Profile updated");
     } catch (error) {
-      toast.error("Could not update profile details");
+      toast.error("Could not update profile");
     }
   };
 
   const onChange = (e) => {
-    setFormData((prevState) => ({
+    setUser((prevState) => ({
       ...prevState,
       [e.target.id]: e.target.value,
     }));
   };
+
+  if (loading) {
+    return <Spinner />;
+  }
 
   return (
     <div className='profile'>
@@ -111,29 +74,41 @@ function Profile() {
         </button>
       </header>
       <main>
-        <div className='profileDetailsHeader'>
-          <p className='profileDetailsText'>Personal Details</p>
-          <p
-            className='changePersonalDetails'
-            onClick={() => {
-              changeDetails && onSubmit();
-              setChangeDetails((prevState) => !prevState);
-            }}
-          >
-            {changeDetails ? "Done" : "Change"}
-          </p>
-        </div>
-
-        <div className='profileCard'>
-          <form>
+        <div className='profileBox'>
+          <h4>Personal Details</h4>
+          <form onSubmit={onSubmit}>
             <input
               type='text'
               id='name'
-              className={!changeDetails ? "profileName" : "profileNameActive"}
-              disabled={!changeDetails}
-              value={name}
+              value={user.name}
+              onChange={onChange}
+              placeholder='Name'
+            />
+            <input
+              type='text'
+              id='street'
+              value={user.street}
               onChange={onChange}
             />
+            <input
+              type='text'
+              id='town'
+              value={user.town}
+              onChange={onChange}
+            />
+            <input type='text' id='psc' value={user.psc} onChange={onChange} />
+            <input
+              type='text'
+              id='phone'
+              value={user.phone}
+              onChange={onChange}
+            />
+            <div className='weekDayButtonBox'>
+              <button className='weekDayButton'>
+                Update profile
+                <ArrowRightIcon fill='#fff' width='34px' height='34px' />
+              </button>
+            </div>
           </form>
         </div>
       </main>

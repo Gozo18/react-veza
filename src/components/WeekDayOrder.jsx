@@ -20,7 +20,6 @@ function WeekDayOrder({
   priceNo5,
   priceNo6,
   dayDate,
-  isOrdered,
 }) {
   const auth = getAuth();
   const [orders, setOrders] = useState([]);
@@ -37,6 +36,7 @@ function WeekDayOrder({
   const { no1, no2, no3, no4, no5, no6 } = formData;
 
   useEffect(() => {
+    let abortController = new AbortController();
     const fetchOrders = async () => {
       try {
         const docRef = query(
@@ -59,7 +59,7 @@ function WeekDayOrder({
             return setOrderMade(true);
           }
 
-          return <></>;
+          return null;
         });
       } catch (error) {
         toast.error("Could not fetch data!");
@@ -67,6 +67,7 @@ function WeekDayOrder({
     };
 
     fetchOrders();
+    abortController.abort();
   }, [auth.currentUser.uid, dayDate, orders]);
 
   const onChange = (e) => {
@@ -95,9 +96,63 @@ function WeekDayOrder({
 
     try {
       await addDoc(collection(db, "order"), formData);
+      toast.success("Oder made");
     } catch (error) {
       toast.error("Something went wrong");
     }
+  };
+
+  const itemMinus = (e) => {
+    const Nu = e.target.getAttribute("data-item");
+
+    const result = formData[Nu];
+
+    if (result === 0) {
+      return null;
+    }
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.getAttribute("data-item")]: result - 1,
+      no1Text: no1Name,
+      no2Text: no2Name,
+      no3Text: no3Name,
+      no4Text: no4Name,
+      no5Text: no5Name,
+      no6Text: no6Name,
+      no1Price: priceNo1,
+      no2Price: priceNo2,
+      no3Price: priceNo3,
+      no4Price: priceNo4,
+      no5Price: priceNo5,
+      no6Price: priceNo6,
+      date: dayDate,
+      userRef: auth.currentUser.uid,
+    }));
+  };
+
+  const itemPlus = (e) => {
+    const Nu = e.target.getAttribute("data-item");
+
+    const result = formData[Nu];
+
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.getAttribute("data-item")]: result + 1,
+      no1Text: no1Name,
+      no2Text: no2Name,
+      no3Text: no3Name,
+      no4Text: no4Name,
+      no5Text: no5Name,
+      no6Text: no6Name,
+      no1Price: priceNo1,
+      no2Price: priceNo2,
+      no3Price: priceNo3,
+      no4Price: priceNo4,
+      no5Price: priceNo5,
+      no6Price: priceNo6,
+      date: dayDate,
+      userRef: auth.currentUser.uid,
+    }));
   };
 
   return (
@@ -110,74 +165,121 @@ function WeekDayOrder({
             <li className='weekItem'>
               <div className='weekItemText'>1. {no1Name}</div>
               <div className='weekItemPrice'>{priceNo1},- Kč</div>
-              <input
-                className='weekItemInput'
-                type='number'
-                onChange={onChange}
-                id='no1'
-                value={no1}
-                min='0'
-              />
+              <div className='weekItemInput'>
+                <div className='itemMinus' onClick={itemMinus} data-item='no1'>
+                  -
+                </div>
+                <input
+                  type='number'
+                  onChange={onChange}
+                  id='no1'
+                  value={no1}
+                  min='0'
+                />
+                <div className='itemPlus' onClick={itemPlus} data-item='no1'>
+                  +
+                </div>
+              </div>
             </li>
             <li className='weekItem'>
               <div className='weekItemText'>2. {no2Name}</div>
               <div className='weekItemPrice'>{priceNo2},- Kč</div>
-              <input
-                className='weekItemInput'
-                type='number'
-                onChange={onChange}
-                id='no2'
-                value={no2}
-              />
+              <div className='weekItemInput'>
+                <div className='itemMinus' onClick={itemMinus} data-item='no2'>
+                  -
+                </div>
+                <input
+                  type='number'
+                  onChange={onChange}
+                  id='no2'
+                  value={no2}
+                  min='0'
+                />
+                <div className='itemPlus' onClick={itemPlus} data-item='no2'>
+                  +
+                </div>
+              </div>
             </li>
             <li className='weekItem'>
               <div className='weekItemText'>3. {no3Name}</div>
               <div className='weekItemPrice'>{priceNo3},- Kč</div>
-              <input
-                className='weekItemInput'
-                type='number'
-                onChange={onChange}
-                id='no3'
-                value={no3}
-              />
+              <div className='weekItemInput'>
+                <div className='itemMinus' onClick={itemMinus} data-item='no3'>
+                  -
+                </div>
+                <input
+                  type='number'
+                  onChange={onChange}
+                  id='no3'
+                  value={no3}
+                  min='0'
+                />
+                <div className='itemPlus' onClick={itemPlus} data-item='no3'>
+                  +
+                </div>
+              </div>
             </li>
             <li className='weekItem'>
               <div className='weekItemText'>4. {no4Name}</div>
               <div className='weekItemPrice'>{priceNo4},- Kč</div>
-              <input
-                className='weekItemInput'
-                type='number'
-                onChange={onChange}
-                id='no4'
-                value={no4}
-              />
+              <div className='weekItemInput'>
+                <div className='itemMinus' onClick={itemMinus} data-item='no4'>
+                  -
+                </div>
+                <input
+                  type='number'
+                  onChange={onChange}
+                  id='no4'
+                  value={no4}
+                  min='0'
+                />
+                <div className='itemPlus' onClick={itemPlus} data-item='no4'>
+                  +
+                </div>
+              </div>
             </li>
             <li className='weekItem'>
               <div className='weekItemText'>5. {no5Name}</div>
               <div className='weekItemPrice'>{priceNo5},- Kč</div>
-              <input
-                className='weekItemInput'
-                type='number'
-                onChange={onChange}
-                id='no5'
-                value={no5}
-              />
+              <div className='weekItemInput'>
+                <div className='itemMinus' onClick={itemMinus} data-item='no5'>
+                  -
+                </div>
+                <input
+                  type='number'
+                  onChange={onChange}
+                  id='no5'
+                  value={no5}
+                  min='0'
+                />
+                <div className='itemPlus' onClick={itemPlus} data-item='no5'>
+                  +
+                </div>
+              </div>
             </li>
             <li className='weekItem'>
               <div className='weekItemText'>6. {no6Name}</div>
               <div className='weekItemPrice'>{priceNo6},- Kč</div>
-              <input
-                className='weekItemInput'
-                type='number'
-                onChange={onChange}
-                id='no6'
-                value={no6}
-              />
+              <div className='weekItemInput'>
+                <div className='itemMinus' onClick={itemMinus} data-item='no6'>
+                  -
+                </div>
+                <input
+                  type='number'
+                  onChange={onChange}
+                  id='no6'
+                  value={no6}
+                  min='0'
+                />
+                <div className='itemPlus' onClick={itemPlus} data-item='no6'>
+                  +
+                </div>
+              </div>
             </li>
           </ol>
-          <div className='signInBar'>
-            <p className='signInText'>Send order</p>
-            <button className='signInButton'>
+          <div className='weekDayButtonBox'>
+            <button className='weekDayButton'>
+              Send order
               <ArrowRightIcon fill='#fff' width='34px' height='34px' />
             </button>
           </div>
