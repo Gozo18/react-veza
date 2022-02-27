@@ -373,7 +373,8 @@ main {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 34px;
+  height: 42px;
+  font-weight: 500;
 }
 
 .weekItemPrice {
@@ -564,4 +565,40 @@ main {
 
 .userItemPsc {
   width: 20%;
+}
+
+/* Admin section */
+
+.weekOfferBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weekOfferDate,
+.weekOfferDay {
+  width: 50%;
+}
+
+.weekOfferDay {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.weekOffer {
+  width: 69%;
+}
+
+.weekOfferPrice {
+  width: 29%;
+}
+
+.adminBox input {
+  margin: 10px 0;
+  padding: 0 20px;
+  height: 45px;
+  border: 0;
+  background: #f2f4f8;
+  border-radius: 5px;
 }
