@@ -5,7 +5,6 @@ import { db } from "../firebase.config";
 import { toast } from "react-toastify";
 import { isEqual } from "date-fns";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
-import { Navigate } from "react-router-dom";
 
 function WeekDayOrder({
   no1Name,
