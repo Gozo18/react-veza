@@ -95,7 +95,7 @@ function CalendarDays({ orders }) {
     return null;
   });
 
-  console.log(dayOrdersArray);
+  /* console.log(dayOrdersArray); */
 
   if (loading) {
     return <Spinner />;

@@ -100,7 +100,6 @@ function Delivery({ orders }) {
 
   dayRefArray.map((dayUser, i) => {
     users.map((user, i) => {
-      console.log(user.uid);
       if (dayUser === user.data.userRef) {
         dayUsersArray.push(user);
       }

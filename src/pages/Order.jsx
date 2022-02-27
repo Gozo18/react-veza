@@ -38,9 +38,9 @@ function Order({ orders }) {
     abortController.abort();
   }, [auth.currentUser.uid, orders, orderData]);
 
-  console.log(orders);
+  /* console.log(orders);
 
-  console.log(orderData);
+  console.log(orderData); */
 
   if (loading) {
     return <Spinner />;

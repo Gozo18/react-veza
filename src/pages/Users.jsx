@@ -66,7 +66,7 @@ function Users() {
     return <Spinner />;
   }
 
-  console.log(users);
+  /* console.log(users); */
 
   return (
     <div className='pageContainer'>
