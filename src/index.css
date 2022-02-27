@@ -449,9 +449,14 @@ main {
   display: flex;
 }
 
+.orderItemInfoText {
+  padding: 0 5px 10px;
+  width: 60%;
+}
+
 .orderItemInfo {
   padding: 0 5px 10px;
-  width: 33%;
+  width: 20%;
 }
 
 .alignRight {
