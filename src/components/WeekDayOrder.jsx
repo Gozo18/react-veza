@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { getAuth } from "firebase/auth";
-import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { toast } from "react-toastify";
 import { isEqual } from "date-fns";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
+import { Navigate } from "react-router-dom";
 
 function WeekDayOrder({
   no1Name,
@@ -20,9 +21,9 @@ function WeekDayOrder({
   priceNo5,
   priceNo6,
   dayDate,
+  orderData,
 }) {
   const auth = getAuth();
-  const [orders, setOrders] = useState([]);
   const [orderMade, setOrderMade] = useState(false);
   const [formData, setFormData] = useState({
     no1: 0,
@@ -36,39 +37,13 @@ function WeekDayOrder({
   const { no1, no2, no3, no4, no5, no6 } = formData;
 
   useEffect(() => {
-    let abortController = new AbortController();
-    const fetchOrders = async () => {
-      try {
-        const docRef = query(
-          collection(db, "order"),
-          where("userRef", "==", auth.currentUser.uid)
-        );
-        const docSnap = await getDocs(docRef);
-
-        const orderInfo = [];
-
-        docSnap.forEach((doc) => {
-          return orderInfo.push({
-            data: doc.data(),
-          });
-        });
-
-        setOrders(orderInfo);
-        orders.map((order, i) => {
-          if (isEqual(order.data.date.toDate(), dayDate.toDate())) {
-            return setOrderMade(true);
-          }
-
-          return null;
-        });
-      } catch (error) {
-        toast.error("Could not fetch data!");
+    orderData.map((order, i) => {
+      if (isEqual(order.data.date.toDate(), dayDate.toDate())) {
+        return setOrderMade(true);
       }
-    };
-
-    fetchOrders();
-    abortController.abort();
-  }, [auth.currentUser.uid, dayDate, orders]);
+      return null;
+    });
+  }, [orderData, dayDate]);
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -96,7 +71,9 @@ function WeekDayOrder({
 
     try {
       await addDoc(collection(db, "order"), formData);
-      toast.success("Oder made");
+      /* toast.success("Oder made"); */
+      setOrderMade(true);
+      window.location.reload();
     } catch (error) {
       toast.error("Something went wrong");
     }

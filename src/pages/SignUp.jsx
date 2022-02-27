@@ -21,6 +21,7 @@ function SignUp() {
     town: "",
     psc: "",
     phone: "",
+    userRef: "",
   });
   const { name, street, town, psc, phone, email, password } = formData;
 
@@ -54,6 +55,7 @@ function SignUp() {
       const formDataCopy = { ...formData };
       delete formDataCopy.password;
       formDataCopy.timestamp = serverTimestamp();
+      formDataCopy.userRef = user.uid;
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
 

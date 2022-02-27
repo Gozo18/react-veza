@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { getAuth } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import Spinner from "../components/Spinner";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
@@ -111,6 +111,16 @@ function Profile() {
             </div>
           </form>
         </div>
+        {user.admin ? (
+          <div className='adminLinkBox'>
+            <Link to='/admin' className='adminLink'>
+              Admin section
+              <ArrowRightIcon fill='#fff' width='34px' height='34px' />
+            </Link>
+          </div>
+        ) : (
+          <></>
+        )}
       </main>
     </div>
   );

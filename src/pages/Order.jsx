@@ -4,10 +4,13 @@ import { toast } from "react-toastify";
 import { useState, useEffect } from "react";
 import Spinner from "../components/Spinner";
 import WeekDayOrder from "../components/WeekDayOrder";
+import { getAuth } from "firebase/auth";
 
-function Order() {
+function Order({ orders }) {
+  const auth = getAuth();
   const [weekOffer, setWeekOffer] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [orderData, setOrderData] = useState([]);
 
   useEffect(() => {
     let abortController = new AbortController();
@@ -25,8 +28,19 @@ function Order() {
     };
 
     fetchWeek();
+
+    orders.map((order, i) => {
+      if (order.data.userRef === auth.currentUser.uid) {
+        orderData.push(order);
+      }
+      return null;
+    });
     abortController.abort();
-  }, []);
+  }, [auth.currentUser.uid, orders, orderData]);
+
+  console.log(orders);
+
+  console.log(orderData);
 
   if (loading) {
     return <Spinner />;
@@ -39,8 +53,6 @@ function Order() {
   const frDate = weekOffer.DateFr.toDate().toLocaleDateString();
   const saDate = weekOffer.DateSa.toDate().toLocaleDateString();
   const suDate = weekOffer.DateSu.toDate().toLocaleDateString();
-
-  /* console.log(weekOffer); */
 
   return (
     <div className='pageContainer'>
@@ -66,6 +78,7 @@ function Order() {
               priceNo4={weekOffer.priceMo4}
               priceNo5={weekOffer.priceMo5}
               priceNo6={weekOffer.priceMo6}
+              orderData={orderData}
             />
           </li>
           <li className='weekDay'>
@@ -84,6 +97,7 @@ function Order() {
               priceNo4={weekOffer.priceTu4}
               priceNo5={weekOffer.priceTu5}
               priceNo6={weekOffer.priceTu6}
+              orderData={orderData}
             />
           </li>
           <li className='weekDay'>
@@ -102,6 +116,7 @@ function Order() {
               priceNo4={weekOffer.priceWe4}
               priceNo5={weekOffer.priceWe5}
               priceNo6={weekOffer.priceWe6}
+              orderData={orderData}
             />
           </li>
           <li className='weekDay'>
@@ -120,6 +135,7 @@ function Order() {
               priceNo4={weekOffer.priceTh4}
               priceNo5={weekOffer.priceTh5}
               priceNo6={weekOffer.priceTh6}
+              orderData={orderData}
             />
           </li>
           <li className='weekDay'>
@@ -138,6 +154,7 @@ function Order() {
               priceNo4={weekOffer.priceFr4}
               priceNo5={weekOffer.priceFr5}
               priceNo6={weekOffer.priceFr6}
+              orderData={orderData}
             />
           </li>
           <li className='weekDay'>
@@ -156,6 +173,7 @@ function Order() {
               priceNo4={weekOffer.priceSa4}
               priceNo5={weekOffer.priceSa5}
               priceNo6={weekOffer.priceSa6}
+              orderData={orderData}
             />
           </li>
           <li className='weekDay'>
@@ -174,6 +192,7 @@ function Order() {
               priceNo4={weekOffer.priceSu4}
               priceNo5={weekOffer.priceSu5}
               priceNo6={weekOffer.priceSu6}
+              orderData={orderData}
             />
           </li>
         </ul>
