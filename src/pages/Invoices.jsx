@@ -63,7 +63,7 @@ function Invoices() {
   return (
     <div className='pageContainer'>
       <header>
-        <p className='pageHeader'>Orders</p>
+        <p className='pageHeader'>Moje objednávky</p>
       </header>
 
       {loading ? (
@@ -78,7 +78,7 @@ function Invoices() {
             />
           </div>
           <p className='orderDate'>
-            Selected Date: <b>{value.toLocaleDateString()}</b>
+            Zvolené datum: <b>{value.toLocaleDateString()}</b>
           </p>
 
           {orders.map((order, i) => {
@@ -93,7 +93,7 @@ function Invoices() {
         </main>
       ) : (
         <div className='orderItems'>
-          <p>No orders made</p>
+          <p>Žádné objednávky</p>
         </div>
       )}
     </div>

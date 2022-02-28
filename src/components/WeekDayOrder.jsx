@@ -295,7 +295,7 @@ function WeekDayOrder({
           </ol>
           <div className='weekDayButtonBox'>
             <button className='weekDayButton'>
-              Send order
+              Odeslat objednávku
               <ArrowRightIcon fill='#fff' width='34px' height='34px' />
             </button>
           </div>

@@ -115,7 +115,7 @@ function Delivery({ orders }) {
   return (
     <div className='pageContainer'>
       <header>
-        <p className='pageHeader'>Delivery</p>
+        <p className='pageHeader'>Doprava</p>
       </header>
 
       <main>
@@ -127,12 +127,12 @@ function Delivery({ orders }) {
           />
         </div>
         <p className='orderDate'>
-          Selected Date: <b>{value.toLocaleDateString()}</b>
+          Zvolené datum: <b>{value.toLocaleDateString()}</b>
         </p>
 
-        <div className='deliveryBox'>
-          {dayUsersArray.map((us, i) => {
-            return (
+        {dayUsersArray.map((us, i) => {
+          return (
+            <div className='deliveryBox'>
               <div key={i} className='userItem'>
                 <div className='userItemName'>{us.data.name}</div>
                 <div className='userItemStreet'>{us.data.street}</div>
@@ -140,9 +140,9 @@ function Delivery({ orders }) {
                 <div className='userItemPsc'>{us.data.psc}</div>
                 <div className='userItemPhone'>tel.: {us.data.phone}</div>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </main>
     </div>
   );

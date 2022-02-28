@@ -104,7 +104,7 @@ function CalendarDays({ orders }) {
   return (
     <div className='pageContainer'>
       <header>
-        <p className='pageHeader'>Delivery</p>
+        <p className='pageHeader'>Kalendář objednávek</p>
       </header>
 
       <main>
@@ -116,7 +116,7 @@ function CalendarDays({ orders }) {
           />
         </div>
         <p className='orderDate'>
-          Selected Date: <b>{value.toLocaleDateString()}</b>
+          Zvolené datum: <b>{value.toLocaleDateString()}</b>
         </p>
 
         <DayItem orders={dayOrdersArray} />

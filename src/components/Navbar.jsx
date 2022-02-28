@@ -42,7 +42,7 @@ function Navbar() {
                     : "navbarListItemName"
                 }
               >
-                Users
+                Zákazníci
               </p>
             </li>
             <li
@@ -61,7 +61,7 @@ function Navbar() {
                     : "navbarListItemName"
                 }
               >
-                Delivery
+                Doprava
               </p>
             </li>
             <li
@@ -80,7 +80,7 @@ function Navbar() {
                     : "navbarListItemName"
                 }
               >
-                Calendar
+                Kalendář
               </p>
             </li>
             <li className='navbarListItem' onClick={() => navigate("/admin")}>
@@ -96,7 +96,7 @@ function Navbar() {
                     : "navbarListItemName"
                 }
               >
-                Admin
+                Úpravy
               </p>
             </li>
             <li className='navbarListItem' onClick={() => navigate("/profile")}>
@@ -112,7 +112,7 @@ function Navbar() {
                     : "navbarListItemName"
                 }
               >
-                Back
+                Zpět
               </p>
             </li>
           </ul>
@@ -138,7 +138,7 @@ function Navbar() {
                   : "navbarListItemName"
               }
             >
-              Order
+              Nabídka
             </p>
           </li>
           <li className='navbarListItem' onClick={() => navigate("/invoices")}>
@@ -154,7 +154,7 @@ function Navbar() {
                   : "navbarListItemName"
               }
             >
-              Invoices
+              Objednávky
             </p>
           </li>
           <li className='navbarListItem' onClick={() => navigate("/profile")}>
@@ -170,7 +170,7 @@ function Navbar() {
                   : "navbarListItemName"
               }
             >
-              Profile
+              Profil
             </p>
           </li>
         </ul>

@@ -420,19 +420,19 @@ function Admin({ orders }) {
     return (
       <div className='pageContainer'>
         <header>
-          <p className='pageHeader'>Admin</p>
+          <p className='pageHeader'>Administrace</p>
         </header>
 
         <main>
-          <div className='adminBox'>Number of orders: {numOr}</div>
-          <div className='adminBox'>Number of unit orders: {sum}</div>
-          <div className='adminBox'>Number of users: {numUs}</div>
+          <div className='adminBox'>Počet objednávek: {numOr}</div>
+          <div className='adminBox'>Počet obědů: {sum}</div>
+          <div className='adminBox'>Počet uživatelů: {numUs}</div>
 
           <div className='adminBox'>
-            <h4>Week offers</h4>
+            <h4>Týdenní nabídka</h4>
             <form onSubmit={onSubmit}>
               <div className='weekOfferBox'>
-                <div className='weekOfferDay'>Monday</div>
+                <div className='weekOfferDay'>Pondělí</div>
                 <input
                   type='date'
                   id='DateMo'
@@ -526,7 +526,7 @@ function Admin({ orders }) {
                 />
               </div>
               <div className='weekOfferBox'>
-                <div className='weekOfferDay'>Tuesday</div>
+                <div className='weekOfferDay'>Úterý</div>
                 <input
                   type='date'
                   id='DateTu'
@@ -620,7 +620,7 @@ function Admin({ orders }) {
                 />
               </div>
               <div className='weekOfferBox'>
-                <div className='weekOfferDay'>Wednesday</div>
+                <div className='weekOfferDay'>Středa</div>
                 <input
                   type='date'
                   id='DateWe'
@@ -714,7 +714,7 @@ function Admin({ orders }) {
                 />
               </div>
               <div className='weekOfferBox'>
-                <div className='weekOfferDay'>Thursday</div>
+                <div className='weekOfferDay'>Čtvrtek</div>
                 <input
                   type='date'
                   id='DateTh'
@@ -808,7 +808,7 @@ function Admin({ orders }) {
                 />
               </div>
               <div className='weekOfferBox'>
-                <div className='weekOfferDay'>Friday</div>
+                <div className='weekOfferDay'>Pátek</div>
                 <input
                   type='date'
                   id='DateFr'
@@ -902,7 +902,7 @@ function Admin({ orders }) {
                 />
               </div>
               <div className='weekOfferBox'>
-                <div className='weekOfferDay'>Saturday</div>
+                <div className='weekOfferDay'>Sobota</div>
                 <input
                   type='date'
                   id='DateSa'
@@ -996,7 +996,7 @@ function Admin({ orders }) {
                 />
               </div>
               <div className='weekOfferBox'>
-                <div className='weekOfferDay'>Sunday</div>
+                <div className='weekOfferDay'>Neděle</div>
                 <input
                   type='date'
                   id='DateSu'
@@ -1091,7 +1091,7 @@ function Admin({ orders }) {
               </div>
               <div className='weekDayButtonBox'>
                 <button className='weekDayButton'>
-                  Update week offer
+                  Upravit nabídku
                   <ArrowRightIcon fill='#fff' width='34px' height='34px' />
                 </button>
               </div>
@@ -1104,15 +1104,15 @@ function Admin({ orders }) {
     return (
       <div className='pageContainer'>
         <header>
-          <p className='pageHeader'>Admin</p>
+          <p className='pageHeader'>Administrace</p>
         </header>
 
         <main>
-          <div className='adminBox'>Number of orders: {numOr}</div>
-          <div className='adminBox'>Number of unit orders: {sum}</div>
-          <div className='adminBox'>Number of users: {numUs}</div>
+          <div className='adminBox'>Počet objednávek: {numOr}</div>
+          <div className='adminBox'>Počet obědů: {sum}</div>
+          <div className='adminBox'>Počet uživatelů: {numUs}</div>
 
-          <p>Loading...</p>
+          <p>Načítám...</p>
         </main>
       </div>
     );

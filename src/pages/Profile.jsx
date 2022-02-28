@@ -68,14 +68,11 @@ function Profile() {
   return (
     <div className='profile'>
       <header className='profileHeader'>
-        <p className='pageHeader'>My Profile</p>
-        <button type='button' className='logOut' onClick={onLogout}>
-          Logout
-        </button>
+        <p className='pageHeader'>Můj profil</p>
       </header>
       <main>
         <div className='profileBox'>
-          <h4>Personal Details</h4>
+          <h4>Osobní údaje</h4>
           <form onSubmit={onSubmit}>
             <input
               type='text'
@@ -105,7 +102,7 @@ function Profile() {
             />
             <div className='weekDayButtonBox'>
               <button className='weekDayButton'>
-                Update profile
+                Upravit profil
                 <ArrowRightIcon fill='#fff' width='34px' height='34px' />
               </button>
             </div>
@@ -114,13 +111,19 @@ function Profile() {
         {user.admin ? (
           <div className='adminLinkBox'>
             <Link to='/admin' className='adminLink'>
-              Admin section
+              Administrátorská sekce
               <ArrowRightIcon fill='#fff' width='34px' height='34px' />
             </Link>
           </div>
         ) : (
           <></>
         )}
+
+        <div className='adminLinkBox'>
+          <button type='button' className='logOut' onClick={onLogout}>
+            Odhlásit se
+          </button>
+        </div>
       </main>
     </div>
   );

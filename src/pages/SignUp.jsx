@@ -68,16 +68,17 @@ function SignUp() {
   return (
     <>
       <div className='pageContainer'>
-        <header>
-          <p className='pageHeader'>Welcome Back!</p>
+        <header className='regHeader'>
+          <p className='pageHeader'>Venuše Zaječí</p>
         </header>
 
         <main>
+          <p className='pageHeader'>Registrace</p>
           <form onSubmit={onSubmit}>
             <input
               type='text'
               className='nameInput'
-              placeholder='Name'
+              placeholder='Jméno'
               id='name'
               value={name}
               onChange={onChange}
@@ -85,7 +86,7 @@ function SignUp() {
             <input
               type='text'
               className='streetInput'
-              placeholder='Street'
+              placeholder='Ulice'
               id='street'
               value={street}
               onChange={onChange}
@@ -93,7 +94,7 @@ function SignUp() {
             <input
               type='text'
               className='townInput'
-              placeholder='Town'
+              placeholder='Město'
               id='town'
               value={town}
               onChange={onChange}
@@ -101,7 +102,7 @@ function SignUp() {
             <input
               type='number'
               className='pscInput'
-              placeholder='PSC'
+              placeholder='PSČ'
               id='psc'
               value={psc}
               onChange={onChange}
@@ -109,7 +110,7 @@ function SignUp() {
             <input
               type='number'
               className='phoneInput'
-              placeholder='Phone'
+              placeholder='Telefon'
               id='phone'
               value={phone}
               onChange={onChange}
@@ -127,7 +128,7 @@ function SignUp() {
               <input
                 type={showPassword ? "text" : "password"}
                 className='passwordInput'
-                placeholder='Password'
+                placeholder='Heslo'
                 id='password'
                 value={password}
                 onChange={onChange}
@@ -144,16 +145,16 @@ function SignUp() {
               Forgot Password
             </Link> */}
 
-            <div className='signUpBar'>
-              <p className='signUpText'>Sign Up</p>
-              <button className='signUpButton'>
+            <div className='weekDayButtonBox'>
+              <button className='weekDayButton'>
+                Zaregistrovat
                 <ArrowRightIcon fill='#fff' width='34px' height='34px' />
               </button>
             </div>
           </form>
 
           <Link to='/sign-in' className='registerLink'>
-            Sign In Instead
+            Přihlásit se
           </Link>
         </main>
       </div>

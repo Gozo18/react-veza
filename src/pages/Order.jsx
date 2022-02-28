@@ -58,13 +58,13 @@ function Order({ orders }) {
     return (
       <div className='pageContainer'>
         <header>
-          <p className='pageHeader'>Week offer</p>
+          <p className='pageHeader'>Týdenní nabídka</p>
         </header>
 
         <main>
           <ul className='weekBox'>
             <li className='weekDay'>
-              <h4>Monday {moDate}</h4>
+              <h4>Pondělí {moDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateMo}
                 no1Name={weekOffer.Mo1}
@@ -83,7 +83,7 @@ function Order({ orders }) {
               />
             </li>
             <li className='weekDay'>
-              <h4>Tuesday {tuDate}</h4>
+              <h4>Úterý {tuDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateTu}
                 no1Name={weekOffer.Tu1}
@@ -102,7 +102,7 @@ function Order({ orders }) {
               />
             </li>
             <li className='weekDay'>
-              <h4>Wednesday {weDate}</h4>
+              <h4>Středa {weDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateWe}
                 no1Name={weekOffer.We1}
@@ -121,7 +121,7 @@ function Order({ orders }) {
               />
             </li>
             <li className='weekDay'>
-              <h4>Thursday {thDate}</h4>
+              <h4>Čtvrtek {thDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateTh}
                 no1Name={weekOffer.Th1}
@@ -140,7 +140,7 @@ function Order({ orders }) {
               />
             </li>
             <li className='weekDay'>
-              <h4>Friday {frDate}</h4>
+              <h4>Pátek {frDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateFr}
                 no1Name={weekOffer.Fr1}
@@ -159,7 +159,7 @@ function Order({ orders }) {
               />
             </li>
             <li className='weekDay'>
-              <h4>Saturday {saDate}</h4>
+              <h4>Sobota {saDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateSa}
                 no1Name={weekOffer.Sa1}
@@ -178,7 +178,7 @@ function Order({ orders }) {
               />
             </li>
             <li className='weekDay'>
-              <h4>Sunday {suDate}</h4>
+              <h4>Neděle {suDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateSu}
                 no1Name={weekOffer.Su1}
@@ -201,7 +201,7 @@ function Order({ orders }) {
       </div>
     );
   } else {
-    return <p>Loading...</p>;
+    return <p>Načítám...</p>;
   }
 }
 

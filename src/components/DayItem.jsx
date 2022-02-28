@@ -96,13 +96,13 @@ function DayItem({ orders }) {
         <hr />
         <div className='orderItemBox'>
           <div className='orderItemInfoText'>
-            <b>Total</b>
+            <b>Celkem</b>
           </div>
           <div className='orderItemInfo alignRight'>
             <b>{totalSum}</b>
           </div>
           <div className='orderItemInfo alignRight'>
-            <b>{totalPrice}</b>
+            <b>{totalPrice},-</b>
           </div>
         </div>
       </div>

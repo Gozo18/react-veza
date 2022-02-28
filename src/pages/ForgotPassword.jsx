@@ -21,11 +21,12 @@ function ForgotPassword() {
   };
   return (
     <div className='pageContainer'>
-      <header>
-        <p className='pageHeader'>Forgot Password</p>
+      <header className='signInHeader'>
+        <p className='pageHeader'>Venuše Zaječí</p>
       </header>
 
       <main>
+        <p className='pageHeader'>Zapomenuté heslo</p>
         <form onSubmit={onSubmit}>
           <input
             type='email'
@@ -35,17 +36,18 @@ function ForgotPassword() {
             value={email}
             onChange={onChange}
           />
-          <Link className='forgotPasswordLink' to='/sign-in'>
-            Sign In
-          </Link>
 
-          <div className='signInBar'>
-            <div className='signInText'>Send Reset Link</div>
-            <button className='signInButton'>
-              <ArrowRightIcon fil='#fff' width='34px' height='34px' />
+          <div className='weekDayButtonBox'>
+            <button className='weekDayButton'>
+              Poslat e-mail s odkazem na reset hesla
+              <ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
             </button>
           </div>
         </form>
+
+        <Link className='forgotPasswordLink' to='/sign-in'>
+          Přihlásit se
+        </Link>
       </main>
     </div>
   );

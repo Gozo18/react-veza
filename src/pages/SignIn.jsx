@@ -45,8 +45,8 @@ function SignIn() {
   return (
     <>
       <div className='pageContainer'>
-        <header>
-          <p className='pageHeader'>Welcome!</p>
+        <header className='signInHeader'>
+          <p className='pageHeader'>Venuše Zaječí</p>
         </header>
 
         <main>
@@ -64,7 +64,7 @@ function SignIn() {
               <input
                 type={showPassword ? "text" : "password"}
                 className='passwordInput'
-                placeholder='Password'
+                placeholder='Heslo'
                 id='password'
                 value={password}
                 onChange={onChange}
@@ -77,20 +77,20 @@ function SignIn() {
                 onClick={() => setShowPassword((prevState) => !prevState)}
               />
             </div>
-            <Link to='/forgot-password' className='forgotPasswordLink'>
-              Forgot Password
-            </Link>
 
-            <div className='signInBar'>
-              <p className='signInText'>Sign In</p>
-              <button className='signInButton'>
+            <div className='weekDayButtonBox'>
+              <button className='weekDayButton'>
+                Přihlásit se
                 <ArrowRightIcon fill='#fff' width='34px' height='34px' />
               </button>
             </div>
           </form>
 
+          <Link to='/forgot-password' className='forgotPasswordLink'>
+            Zapomenuté heslo
+          </Link>
           <Link to='/sign-up' className='registerLink'>
-            Sign Up Instead
+            Registrovat
           </Link>
         </main>
       </div>

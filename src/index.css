@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -154,8 +155,26 @@ main {
 }
 
 .pageHeader {
+  width: 100%;
   font-size: 1.7rem;
   font-weight: bold;
+  text-align: center;
+}
+
+.signInHeader {
+  margin-top: 5rem;
+}
+
+.signInHeader p {
+  margin-bottom: 5rem;
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+}
+
+.regHeader p {
+  margin: 0;
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
 }
 
 .navbar {
@@ -254,10 +273,11 @@ main {
 }
 
 .forgotPasswordLink {
+  margin: 40px 0;
   cursor: pointer;
   color: #00cc66;
   font-weight: 600;
-  text-align: right;
+  text-align: center;
 }
 
 .signInBar,
@@ -306,7 +326,7 @@ main {
 }
 
 .registerLink {
-  margin-top: 1rem;
+  margin: 40px 0;
   color: #00cc66;
   font-weight: 600;
   text-align: center;
@@ -335,14 +355,18 @@ main {
 }
 
 .logOut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 34px;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
   color: #ffffff;
-  background-color: #00cc66;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
+  background-color: #da201a;
+  border-radius: 5px;
+  font-size: 1rem;
 }
 
 /* Week styling */

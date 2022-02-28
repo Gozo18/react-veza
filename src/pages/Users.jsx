@@ -71,13 +71,13 @@ function Users() {
   return (
     <div className='pageContainer'>
       <header>
-        <p className='pageHeader'>Users</p>
+        <p className='pageHeader'>Zákazníci</p>
       </header>
 
       <main>
-        <div className='userBox'>Number of users: {numUs}</div>
+        <div className='userBox'>Počet zákazníků: {numUs}</div>
         <div className='userBox'>
-          <h4>Users List</h4>
+          <h4>List uživatelů</h4>
           {users.map((us, i) => {
             return (
               <div key={i} className='userItem'>
