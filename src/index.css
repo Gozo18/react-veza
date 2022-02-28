@@ -345,7 +345,7 @@ main {
 }
 
 .profile {
-  margin-bottom: 10rem;
+  margin-bottom: 90px;
 }
 
 .profileHeader {
@@ -419,7 +419,7 @@ main {
 }
 
 .weekItemInput input {
-  width: 50%;
+  width: 40%;
   height: 100%;
   border: 0;
   background: #f2f4f8;

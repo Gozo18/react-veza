@@ -4,7 +4,6 @@ import { ReactComponent as OrderIcon } from "../assets/svg/exploreIcon.svg";
 import { ReactComponent as ProfileIcon } from "../assets/svg/personOutlineIcon.svg";
 import { ReactComponent as UsersIcon } from "../assets/svg/badgeIcon.svg";
 import { ReactComponent as PscIcon } from "../assets/svg/pscIcon.svg";
-import { ReactComponent as BackIcon } from "../assets/svg/homeIcon.svg";
 import { ReactComponent as CalendarIcon } from "../assets/svg/calendarIcon.svg";
 import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
 import { ReactComponent as ArrowIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
@@ -119,6 +118,14 @@ function Navbar() {
         </nav>
       </footer>
     );
+  }
+
+  if (
+    location.pathname === "/sign-in" ||
+    location.pathname === "/sign-up" ||
+    location.pathname === "/forgot-password"
+  ) {
+    return <></>;
   }
 
   return (
