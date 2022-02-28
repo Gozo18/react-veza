@@ -32,6 +32,10 @@ main {
   margin-bottom: 90px;
 }
 
+h4 {
+  margin-top: 0;
+}
+
 .input,
 .passwordInput,
 .emailInput,
@@ -360,7 +364,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 34px;
+  height: 42px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: bold;
@@ -385,7 +389,12 @@ main {
   background-color: #ffffff;
 }
 
+.weekDay p {
+  margin-bottom: 0;
+}
+
 .dayList {
+  margin-bottom: 20px;
   padding: 0;
 }
 
@@ -443,7 +452,7 @@ main {
 }
 
 .weekDayButtonBox {
-  margin: 0 0 1rem;
+  margin: 0;
 }
 
 .weekDayButton {
@@ -451,7 +460,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 34px;
+  height: 42px;
   background-color: #00cc66;
   border-radius: 5px;
   font-size: 1rem;
@@ -548,6 +557,10 @@ main {
   border-radius: 5px;
 }
 
+.profileBoxInput {
+  margin: 10px 0 20px !important;
+}
+
 .adminLinkBox {
   margin: 20px 0;
   padding: 20px 10px;
@@ -559,7 +572,7 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 34px;
+  height: 42px;
   background: #1667ff;
   border-radius: 5px;
   color: #ffffff;

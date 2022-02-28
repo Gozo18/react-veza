@@ -103,6 +103,7 @@ function Profile() {
               id='phone'
               value={user.phone}
               onChange={onChange}
+              className='profileBoxInput'
             />
             <div className='weekDayButtonBox'>
               <button className='weekDayButton'>
