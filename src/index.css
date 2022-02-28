@@ -43,8 +43,8 @@ main {
 .textarea {
   box-shadow: rgba(0, 0, 0, 0.11);
   border: none;
-  background: #ffffff;
-  border-radius: 3rem;
+  background: #f2f4f8;
+  border-radius: 5px;
   height: 3rem;
   width: 100%;
   outline: none;
@@ -171,6 +171,10 @@ main {
   font-size: 2.5rem;
 }
 
+.regHeader {
+  margin-bottom: 20px;
+}
+
 .regHeader p {
   margin: 0;
   font-family: "Lobster", cursive;
@@ -227,32 +231,32 @@ main {
 
 .nameInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/badgeIcon.svg") #ffffff 2.5% center no-repeat;
+  background: url("./assets/svg/badgeIcon.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .streetInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/streetIcon.svg") #ffffff 2.5% center no-repeat;
+  background: url("./assets/svg/streetIcon.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .townInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/townIcon.svg") #ffffff 2.5% center no-repeat;
+  background: url("./assets/svg/townIcon.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .pscInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/pscIcon.svg") #ffffff 2.5% center no-repeat;
+  background: url("./assets/svg/pscIcon.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .phoneInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/phoneIcon.svg") #ffffff 2.5% center no-repeat;
+  background: url("./assets/svg/phoneIcon.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .emailInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/personIcon.svg") #ffffff 2.5% center no-repeat;
+  background: url("./assets/svg/personIcon.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .passwordInputDiv {
@@ -261,7 +265,7 @@ main {
 
 .passwordInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/lockIcon.svg") #ffffff 2.5% center no-repeat;
+  background: url("./assets/svg/lockIcon.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .showPassword {
@@ -273,7 +277,6 @@ main {
 }
 
 .forgotPasswordLink {
-  margin: 40px 0;
   cursor: pointer;
   color: #00cc66;
   font-weight: 600;
@@ -326,11 +329,9 @@ main {
 }
 
 .registerLink {
-  margin: 40px 0;
   color: #00cc66;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 @media (min-width: 1217px) {
@@ -442,7 +443,7 @@ main {
 }
 
 .weekDayButtonBox {
-  margin: 2rem 0 1rem;
+  margin: 0 0 1rem;
 }
 
 .weekDayButton {
@@ -567,7 +568,8 @@ main {
 
 .adminBox,
 .userBox,
-.deliveryBox {
+.deliveryBox,
+.loginBox {
   margin: 0 0 20px;
   padding: 20px 10px;
   background: #ffffff;

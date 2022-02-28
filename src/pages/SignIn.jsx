@@ -50,48 +50,55 @@ function SignIn() {
         </header>
 
         <main>
-          <form onSubmit={onSubmit}>
-            <input
-              type='email'
-              className='emailInput'
-              placeholder='E-mail'
-              id='email'
-              value={email}
-              onChange={onChange}
-            />
-
-            <div className='passwordInputDiv'>
+          <div className='loginBox'>
+            <p className='pageHeader'>Přihlášení</p>
+            <form onSubmit={onSubmit}>
               <input
-                type={showPassword ? "text" : "password"}
-                className='passwordInput'
-                placeholder='Heslo'
-                id='password'
-                value={password}
+                type='email'
+                className='emailInput'
+                placeholder='E-mail'
+                id='email'
+                value={email}
                 onChange={onChange}
               />
 
-              <img
-                src={visibilityIcon}
-                alt='show password'
-                className='showPassword'
-                onClick={() => setShowPassword((prevState) => !prevState)}
-              />
-            </div>
+              <div className='passwordInputDiv'>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className='passwordInput'
+                  placeholder='Heslo'
+                  id='password'
+                  value={password}
+                  onChange={onChange}
+                />
 
-            <div className='weekDayButtonBox'>
-              <button className='weekDayButton'>
-                Přihlásit se
-                <ArrowRightIcon fill='#fff' width='34px' height='34px' />
-              </button>
-            </div>
-          </form>
+                <img
+                  src={visibilityIcon}
+                  alt='show password'
+                  className='showPassword'
+                  onClick={() => setShowPassword((prevState) => !prevState)}
+                />
+              </div>
 
-          <Link to='/forgot-password' className='forgotPasswordLink'>
-            Zapomenuté heslo
-          </Link>
-          <Link to='/sign-up' className='registerLink'>
-            Registrovat
-          </Link>
+              <div className='weekDayButtonBox'>
+                <button className='weekDayButton'>
+                  Přihlásit se
+                  <ArrowRightIcon fill='#fff' width='34px' height='34px' />
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div className='loginBox'>
+            <Link to='/forgot-password' className='forgotPasswordLink'>
+              Zapomenuté heslo
+            </Link>
+          </div>
+          <div className='loginBox'>
+            <Link to='/sign-up' className='registerLink'>
+              Registrovat
+            </Link>
+          </div>
         </main>
       </div>
     </>

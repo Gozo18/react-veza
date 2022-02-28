@@ -73,89 +73,93 @@ function SignUp() {
         </header>
 
         <main>
-          <p className='pageHeader'>Registrace</p>
-          <form onSubmit={onSubmit}>
-            <input
-              type='text'
-              className='nameInput'
-              placeholder='Jméno'
-              id='name'
-              value={name}
-              onChange={onChange}
-            />
-            <input
-              type='text'
-              className='streetInput'
-              placeholder='Ulice'
-              id='street'
-              value={street}
-              onChange={onChange}
-            />
-            <input
-              type='text'
-              className='townInput'
-              placeholder='Město'
-              id='town'
-              value={town}
-              onChange={onChange}
-            />
-            <input
-              type='number'
-              className='pscInput'
-              placeholder='PSČ'
-              id='psc'
-              value={psc}
-              onChange={onChange}
-            />
-            <input
-              type='number'
-              className='phoneInput'
-              placeholder='Telefon'
-              id='phone'
-              value={phone}
-              onChange={onChange}
-            />
-            <input
-              type='email'
-              className='emailInput'
-              placeholder='E-mail'
-              id='email'
-              value={email}
-              onChange={onChange}
-            />
-
-            <div className='passwordInputDiv'>
+          <div className='loginBox'>
+            <p className='pageHeader'>Registrace</p>
+            <form onSubmit={onSubmit}>
               <input
-                type={showPassword ? "text" : "password"}
-                className='passwordInput'
-                placeholder='Heslo'
-                id='password'
-                value={password}
+                type='text'
+                className='nameInput'
+                placeholder='Jméno'
+                id='name'
+                value={name}
+                onChange={onChange}
+              />
+              <input
+                type='text'
+                className='streetInput'
+                placeholder='Ulice'
+                id='street'
+                value={street}
+                onChange={onChange}
+              />
+              <input
+                type='text'
+                className='townInput'
+                placeholder='Město'
+                id='town'
+                value={town}
+                onChange={onChange}
+              />
+              <input
+                type='number'
+                className='pscInput'
+                placeholder='PSČ'
+                id='psc'
+                value={psc}
+                onChange={onChange}
+              />
+              <input
+                type='number'
+                className='phoneInput'
+                placeholder='Telefon'
+                id='phone'
+                value={phone}
+                onChange={onChange}
+              />
+              <input
+                type='email'
+                className='emailInput'
+                placeholder='E-mail'
+                id='email'
+                value={email}
                 onChange={onChange}
               />
 
-              <img
-                src={visibilityIcon}
-                alt='show password'
-                className='showPassword'
-                onClick={() => setShowPassword((prevState) => !prevState)}
-              />
-            </div>
-            {/* <Link to='/forgot-password' className='forgotPasswordLink'>
+              <div className='passwordInputDiv'>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className='passwordInput'
+                  placeholder='Heslo'
+                  id='password'
+                  value={password}
+                  onChange={onChange}
+                />
+
+                <img
+                  src={visibilityIcon}
+                  alt='show password'
+                  className='showPassword'
+                  onClick={() => setShowPassword((prevState) => !prevState)}
+                />
+              </div>
+              {/* <Link to='/forgot-password' className='forgotPasswordLink'>
               Forgot Password
             </Link> */}
 
-            <div className='weekDayButtonBox'>
-              <button className='weekDayButton'>
-                Zaregistrovat
-                <ArrowRightIcon fill='#fff' width='34px' height='34px' />
-              </button>
-            </div>
-          </form>
+              <div className='weekDayButtonBox'>
+                <button className='weekDayButton'>
+                  Zaregistrovat
+                  <ArrowRightIcon fill='#fff' width='34px' height='34px' />
+                </button>
+              </div>
+            </form>
+          </div>
 
-          <Link to='/sign-in' className='registerLink'>
-            Přihlásit se
-          </Link>
+          <div className='loginBox'>
+            <Link to='/sign-in' className='registerLink'>
+              Přihlásit se
+            </Link>
+          </div>
         </main>
       </div>
     </>
