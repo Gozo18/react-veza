@@ -466,6 +466,7 @@ h4 {
   font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
+  cursor: pointer;
 }
 
 /* View orders */
