@@ -39,7 +39,7 @@ function ForgotPassword() {
 
           <div className='weekDayButtonBox'>
             <button className='weekDayButton'>
-              Poslat e-mail s odkazem na reset hesla
+              Poslat odkaz na reset hesla
               <ArrowRightIcon fill='#ffffff' width='34px' height='34px' />
             </button>
           </div>
