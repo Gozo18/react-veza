@@ -42,7 +42,7 @@ function Navbar() {
                     : "navbarListItemName"
                 }
               >
-                Zákazníci
+                Lidé
               </p>
             </li>
             <li
