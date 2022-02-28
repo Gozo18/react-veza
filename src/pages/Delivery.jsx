@@ -92,10 +92,13 @@ function Delivery({ orders }) {
     if (orderTime === valueTime) {
       dayOrdersArray.push(order.data);
     }
+    return null;
   });
 
   dayOrdersArray.map((day, i) => {
     dayRefArray.push(day.userRef);
+
+    return null;
   });
 
   dayRefArray.map((dayUser, i) => {
@@ -103,10 +106,10 @@ function Delivery({ orders }) {
       if (dayUser === user.data.userRef) {
         dayUsersArray.push(user);
       }
+      return null;
     });
+    return null;
   });
-
-  /* console.log(dayUsersArray); */
 
   if (loading) {
     return <Spinner />;

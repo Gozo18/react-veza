@@ -48,6 +48,9 @@ function Profile() {
         psc: user.psc,
         phone: user.phone,
         admin: user.admin,
+        userRef: user.userRef,
+        email: user.email,
+        timestamp: user.timestamp,
       });
       toast.success("Profile updated");
     } catch (error) {
