@@ -47,6 +47,7 @@ function Profile() {
         town: user.town,
         psc: user.psc,
         phone: user.phone,
+        admin: user.admin,
       });
       toast.success("Profile updated");
     } catch (error) {
