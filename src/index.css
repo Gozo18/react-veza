@@ -28,7 +28,7 @@ button {
 }
 
 main {
-  margin-bottom: 105px;
+  margin-bottom: 90px;
 }
 
 .input,
@@ -163,12 +163,13 @@ main {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 85px;
+  height: 70px;
   background-color: #ffffff;
   z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-top: 1px solid #c3c3c3;
 }
 
 .navbarNav {
@@ -196,6 +197,7 @@ main {
 .navbarListItemName,
 .navbarListItemNameActive {
   margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
   font-size: 14px;
   font-weight: 600;
   color: #8f8f8f;

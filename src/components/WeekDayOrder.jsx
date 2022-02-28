@@ -157,101 +157,141 @@ function WeekDayOrder({
                 </div>
               </div>
             </li>
-            <li className='weekItem'>
-              <div className='weekItemText'>2. {no2Name}</div>
-              <div className='weekItemPrice'>{priceNo2},- Kč</div>
-              <div className='weekItemInput'>
-                <div className='itemMinus' onClick={itemMinus} data-item='no2'>
-                  -
+            {no2Name !== "" ? (
+              <li className='weekItem'>
+                <div className='weekItemText'>2. {no2Name}</div>
+                <div className='weekItemPrice'>{priceNo2},- Kč</div>
+                <div className='weekItemInput'>
+                  <div
+                    className='itemMinus'
+                    onClick={itemMinus}
+                    data-item='no2'
+                  >
+                    -
+                  </div>
+                  <input
+                    type='number'
+                    onChange={onChange}
+                    id='no2'
+                    value={no2}
+                    min='0'
+                  />
+                  <div className='itemPlus' onClick={itemPlus} data-item='no2'>
+                    +
+                  </div>
                 </div>
-                <input
-                  type='number'
-                  onChange={onChange}
-                  id='no2'
-                  value={no2}
-                  min='0'
-                />
-                <div className='itemPlus' onClick={itemPlus} data-item='no2'>
-                  +
+              </li>
+            ) : (
+              <></>
+            )}
+            {no3Name !== "" ? (
+              <li className='weekItem'>
+                <div className='weekItemText'>3. {no3Name}</div>
+                <div className='weekItemPrice'>{priceNo3},- Kč</div>
+                <div className='weekItemInput'>
+                  <div
+                    className='itemMinus'
+                    onClick={itemMinus}
+                    data-item='no3'
+                  >
+                    -
+                  </div>
+                  <input
+                    type='number'
+                    onChange={onChange}
+                    id='no3'
+                    value={no3}
+                    min='0'
+                  />
+                  <div className='itemPlus' onClick={itemPlus} data-item='no3'>
+                    +
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li className='weekItem'>
-              <div className='weekItemText'>3. {no3Name}</div>
-              <div className='weekItemPrice'>{priceNo3},- Kč</div>
-              <div className='weekItemInput'>
-                <div className='itemMinus' onClick={itemMinus} data-item='no3'>
-                  -
+              </li>
+            ) : (
+              <></>
+            )}
+            {no4Name !== "" ? (
+              <li className='weekItem'>
+                <div className='weekItemText'>4. {no4Name}</div>
+                <div className='weekItemPrice'>{priceNo4},- Kč</div>
+                <div className='weekItemInput'>
+                  <div
+                    className='itemMinus'
+                    onClick={itemMinus}
+                    data-item='no4'
+                  >
+                    -
+                  </div>
+                  <input
+                    type='number'
+                    onChange={onChange}
+                    id='no4'
+                    value={no4}
+                    min='0'
+                  />
+                  <div className='itemPlus' onClick={itemPlus} data-item='no4'>
+                    +
+                  </div>
                 </div>
-                <input
-                  type='number'
-                  onChange={onChange}
-                  id='no3'
-                  value={no3}
-                  min='0'
-                />
-                <div className='itemPlus' onClick={itemPlus} data-item='no3'>
-                  +
+              </li>
+            ) : (
+              <></>
+            )}
+            {no5Name !== "" ? (
+              <li className='weekItem'>
+                <div className='weekItemText'>5. {no5Name}</div>
+                <div className='weekItemPrice'>{priceNo5},- Kč</div>
+                <div className='weekItemInput'>
+                  <div
+                    className='itemMinus'
+                    onClick={itemMinus}
+                    data-item='no5'
+                  >
+                    -
+                  </div>
+                  <input
+                    type='number'
+                    onChange={onChange}
+                    id='no5'
+                    value={no5}
+                    min='0'
+                  />
+                  <div className='itemPlus' onClick={itemPlus} data-item='no5'>
+                    +
+                  </div>
                 </div>
-              </div>
-            </li>
-            <li className='weekItem'>
-              <div className='weekItemText'>4. {no4Name}</div>
-              <div className='weekItemPrice'>{priceNo4},- Kč</div>
-              <div className='weekItemInput'>
-                <div className='itemMinus' onClick={itemMinus} data-item='no4'>
-                  -
+              </li>
+            ) : (
+              <></>
+            )}
+            {no6Name !== "" ? (
+              <li className='weekItem'>
+                <div className='weekItemText'>6. {no6Name}</div>
+                <div className='weekItemPrice'>{priceNo6},- Kč</div>
+                <div className='weekItemInput'>
+                  <div
+                    className='itemMinus'
+                    onClick={itemMinus}
+                    data-item='no6'
+                  >
+                    -
+                  </div>
+                  <input
+                    type='number'
+                    onChange={onChange}
+                    id='no6'
+                    value={no6}
+                    min='0'
+                  />
+                  <div className='itemPlus' onClick={itemPlus} data-item='no6'>
+                    +
+                  </div>
                 </div>
-                <input
-                  type='number'
-                  onChange={onChange}
-                  id='no4'
-                  value={no4}
-                  min='0'
-                />
-                <div className='itemPlus' onClick={itemPlus} data-item='no4'>
-                  +
-                </div>
-              </div>
-            </li>
-            <li className='weekItem'>
-              <div className='weekItemText'>5. {no5Name}</div>
-              <div className='weekItemPrice'>{priceNo5},- Kč</div>
-              <div className='weekItemInput'>
-                <div className='itemMinus' onClick={itemMinus} data-item='no5'>
-                  -
-                </div>
-                <input
-                  type='number'
-                  onChange={onChange}
-                  id='no5'
-                  value={no5}
-                  min='0'
-                />
-                <div className='itemPlus' onClick={itemPlus} data-item='no5'>
-                  +
-                </div>
-              </div>
-            </li>
-            <li className='weekItem'>
-              <div className='weekItemText'>6. {no6Name}</div>
-              <div className='weekItemPrice'>{priceNo6},- Kč</div>
-              <div className='weekItemInput'>
-                <div className='itemMinus' onClick={itemMinus} data-item='no6'>
-                  -
-                </div>
-                <input
-                  type='number'
-                  onChange={onChange}
-                  id='no6'
-                  value={no6}
-                  min='0'
-                />
-                <div className='itemPlus' onClick={itemPlus} data-item='no6'>
-                  +
-                </div>
-              </div>
-            </li>
+              </li>
+            ) : (
+              <></>
+            )}
           </ol>
           <div className='weekDayButtonBox'>
             <button className='weekDayButton'>

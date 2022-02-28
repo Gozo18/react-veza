@@ -34,38 +34,68 @@ function DayItem({ orders }) {
     return (
       <div className='orderItems'>
         <div className='orderItemBox'>
-          <div className='orderItemInfo'>{orders[0].no1Text}</div>
+          <div className='orderItemInfoText'>{orders[0].no1Text}</div>
           <div className='orderItemInfo alignRight'>{sum1}</div>
           <div className='orderItemInfo alignRight'>{orders[0].no1Price},-</div>
         </div>
-        <div className='orderItemBox'>
-          <div className='orderItemInfo'>{orders[0].no2Text}</div>
-          <div className='orderItemInfo alignRight'>{sum2}</div>
-          <div className='orderItemInfo alignRight'>{orders[0].no2Price},-</div>
-        </div>
-        <div className='orderItemBox'>
-          <div className='orderItemInfo'>{orders[0].no3Text}</div>
-          <div className='orderItemInfo alignRight'>{sum3}</div>
-          <div className='orderItemInfo alignRight'>{orders[0].no3Price},-</div>
-        </div>
-        <div className='orderItemBox'>
-          <div className='orderItemInfo'>{orders[0].no4Text}</div>
-          <div className='orderItemInfo alignRight'>{sum4}</div>
-          <div className='orderItemInfo alignRight'>{orders[0].no4Price},-</div>
-        </div>
-        <div className='orderItemBox'>
-          <div className='orderItemInfo'>{orders[0].no5Text}</div>
-          <div className='orderItemInfo alignRight'>{sum5}</div>
-          <div className='orderItemInfo alignRight'>{orders[0].no5Price},-</div>
-        </div>
-        <div className='orderItemBox'>
-          <div className='orderItemInfo'>{orders[0].no6Text}</div>
-          <div className='orderItemInfo alignRight'>{sum6}</div>
-          <div className='orderItemInfo alignRight'>{orders[0].no6Price},-</div>
-        </div>
+        {orders[0].no2Text !== "" ? (
+          <div className='orderItemBox'>
+            <div className='orderItemInfoText'>{orders[0].no2Text}</div>
+            <div className='orderItemInfo alignRight'>{sum2}</div>
+            <div className='orderItemInfo alignRight'>
+              {orders[0].no2Price},-
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+        {orders[0].no3Text !== "" ? (
+          <div className='orderItemBox'>
+            <div className='orderItemInfoText'>{orders[0].no3Text}</div>
+            <div className='orderItemInfo alignRight'>{sum3}</div>
+            <div className='orderItemInfo alignRight'>
+              {orders[0].no3Price},-
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+        {orders[0].no4Text !== "" ? (
+          <div className='orderItemBox'>
+            <div className='orderItemInfoText'>{orders[0].no4Text}</div>
+            <div className='orderItemInfo alignRight'>{sum4}</div>
+            <div className='orderItemInfo alignRight'>
+              {orders[0].no4Price},-
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+        {orders[0].no5Text !== "" ? (
+          <div className='orderItemBox'>
+            <div className='orderItemInfoText'>{orders[0].no5Text}</div>
+            <div className='orderItemInfo alignRight'>{sum5}</div>
+            <div className='orderItemInfo alignRight'>
+              {orders[0].no5Price},-
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
+        {orders[0].no6Text !== "" ? (
+          <div className='orderItemBox'>
+            <div className='orderItemInfoText'>{orders[0].no6Text}</div>
+            <div className='orderItemInfo alignRight'>{sum6}</div>
+            <div className='orderItemInfo alignRight'>
+              {orders[0].no6Price},-
+            </div>
+          </div>
+        ) : (
+          <></>
+        )}
         <hr />
         <div className='orderItemBox'>
-          <div className='orderItemInfo'>
+          <div className='orderItemInfoText'>
             <b>Total</b>
           </div>
           <div className='orderItemInfo alignRight'>
@@ -78,7 +108,7 @@ function DayItem({ orders }) {
       </div>
     );
   } else {
-    return <p>Loading...</p>;
+    return <p>No orders</p>;
   }
 }
 

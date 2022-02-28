@@ -44,36 +44,60 @@ function OrderItem({ order }) {
 
   return (
     <div className='orderItems'>
-      <div className='orderItemBox'>
-        <div className='orderItemInfoText'>{no1Text}</div>
-        <div className='orderItemInfo alignRight'>{no1}</div>
-        <div className='orderItemInfo alignRight'>{totalNo1Price}</div>
-      </div>
-      <div className='orderItemBox'>
-        <div className='orderItemInfoText'>{no2Text}</div>
-        <div className='orderItemInfo alignRight'>{no2}</div>
-        <div className='orderItemInfo alignRight'>{totalNo2Price}</div>
-      </div>
-      <div className='orderItemBox'>
-        <div className='orderItemInfoText'>{no3Text}</div>
-        <div className='orderItemInfo alignRight'>{no3}</div>
-        <div className='orderItemInfo alignRight'>{totalNo3Price}</div>
-      </div>
-      <div className='orderItemBox'>
-        <div className='orderItemInfoText'>{no4Text}</div>
-        <div className='orderItemInfo alignRight'>{no4}</div>
-        <div className='orderItemInfo alignRight'>{totalNo4Price}</div>
-      </div>
-      <div className='orderItemBox'>
-        <div className='orderItemInfoText'>{no5Text}</div>
-        <div className='orderItemInfo alignRight'>{no5}</div>
-        <div className='orderItemInfo alignRight'>{totalNo5Price}</div>
-      </div>
-      <div className='orderItemBox'>
-        <div className='orderItemInfoText'>{no6Text}</div>
-        <div className='orderItemInfo alignRight'>{no6}</div>
-        <div className='orderItemInfo alignRight'>{totalNo6Price}</div>
-      </div>
+      {no1 > 0 ? (
+        <div className='orderItemBox'>
+          <div className='orderItemInfoText'>{no1Text}</div>
+          <div className='orderItemInfo alignRight'>{no1}</div>
+          <div className='orderItemInfo alignRight'>{totalNo1Price}</div>
+        </div>
+      ) : (
+        <></>
+      )}
+      {no2 > 0 ? (
+        <div className='orderItemBox'>
+          <div className='orderItemInfoText'>{no2Text}</div>
+          <div className='orderItemInfo alignRight'>{no2}</div>
+          <div className='orderItemInfo alignRight'>{totalNo2Price}</div>
+        </div>
+      ) : (
+        <></>
+      )}
+      {no3 > 0 ? (
+        <div className='orderItemBox'>
+          <div className='orderItemInfoText'>{no3Text}</div>
+          <div className='orderItemInfo alignRight'>{no3}</div>
+          <div className='orderItemInfo alignRight'>{totalNo3Price}</div>
+        </div>
+      ) : (
+        <></>
+      )}
+      {no4 > 0 ? (
+        <div className='orderItemBox'>
+          <div className='orderItemInfoText'>{no4Text}</div>
+          <div className='orderItemInfo alignRight'>{no4}</div>
+          <div className='orderItemInfo alignRight'>{totalNo4Price}</div>
+        </div>
+      ) : (
+        <></>
+      )}
+      {no5 > 0 ? (
+        <div className='orderItemBox'>
+          <div className='orderItemInfoText'>{no5Text}</div>
+          <div className='orderItemInfo alignRight'>{no5}</div>
+          <div className='orderItemInfo alignRight'>{totalNo5Price}</div>
+        </div>
+      ) : (
+        <></>
+      )}
+      {no6 > 0 ? (
+        <div className='orderItemBox'>
+          <div className='orderItemInfoText'>{no6Text}</div>
+          <div className='orderItemInfo alignRight'>{no6}</div>
+          <div className='orderItemInfo alignRight'>{totalNo6Price}</div>
+        </div>
+      ) : (
+        <></>
+      )}
       <hr />
       <div className='orderItemBox'>
         <div className='orderItemInfoText'>

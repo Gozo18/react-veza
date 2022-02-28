@@ -6,6 +6,8 @@ import { ReactComponent as UsersIcon } from "../assets/svg/badgeIcon.svg";
 import { ReactComponent as PscIcon } from "../assets/svg/pscIcon.svg";
 import { ReactComponent as BackIcon } from "../assets/svg/homeIcon.svg";
 import { ReactComponent as CalendarIcon } from "../assets/svg/calendarIcon.svg";
+import { ReactComponent as EditIcon } from "../assets/svg/editIcon.svg";
+import { ReactComponent as ArrowIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -30,8 +32,8 @@ function Navbar() {
             <li className='navbarListItem' onClick={() => navigate("/users")}>
               <UsersIcon
                 fill={pathMatchRoute("/users") ? "#2c2c2c" : "#8f8f8f"}
-                width='36px'
-                height='36px'
+                width='25px'
+                height='25px'
               />
               <p
                 className={
@@ -49,8 +51,8 @@ function Navbar() {
             >
               <PscIcon
                 fill={pathMatchRoute("/delivery") ? "#2c2c2c" : "#8f8f8f"}
-                width='36px'
-                height='36px'
+                width='25px'
+                height='25px'
               />
               <p
                 className={
@@ -68,8 +70,8 @@ function Navbar() {
             >
               <CalendarIcon
                 fill={pathMatchRoute("/calendar") ? "#2c2c2c" : "#8f8f8f"}
-                width='36px'
-                height='36px'
+                width='25px'
+                height='25px'
               />
               <p
                 className={
@@ -81,15 +83,31 @@ function Navbar() {
                 Calendar
               </p>
             </li>
-            <li className='navbarListItem' onClick={() => navigate("/profile")}>
-              <BackIcon
+            <li className='navbarListItem' onClick={() => navigate("/admin")}>
+              <EditIcon
                 fill={pathMatchRoute("/admin") ? "#2c2c2c" : "#8f8f8f"}
-                width='36px'
-                height='36px'
+                width='25px'
+                height='25px'
               />
               <p
                 className={
                   pathMatchRoute("/admin")
+                    ? "navbarListItemNameActive"
+                    : "navbarListItemName"
+                }
+              >
+                Admin
+              </p>
+            </li>
+            <li className='navbarListItem' onClick={() => navigate("/profile")}>
+              <ArrowIcon
+                fill={pathMatchRoute("/profile") ? "#2c2c2c" : "#8f8f8f"}
+                width='25px'
+                height='25px'
+              />
+              <p
+                className={
+                  pathMatchRoute("/profile")
                     ? "navbarListItemNameActive"
                     : "navbarListItemName"
                 }
@@ -110,8 +128,8 @@ function Navbar() {
           <li className='navbarListItem' onClick={() => navigate("/")}>
             <OrderIcon
               fill={pathMatchRoute("/") ? "#2c2c2c" : "#8f8f8f"}
-              width='36px'
-              height='36px'
+              width='25px'
+              height='25px'
             />
             <p
               className={
@@ -126,8 +144,8 @@ function Navbar() {
           <li className='navbarListItem' onClick={() => navigate("/invoices")}>
             <InvoiceIcon
               fill={pathMatchRoute("/invoices") ? "#2c2c2c" : "#8f8f8f"}
-              width='36px'
-              height='36px'
+              width='25px'
+              height='25px'
             />
             <p
               className={
@@ -142,8 +160,8 @@ function Navbar() {
           <li className='navbarListItem' onClick={() => navigate("/profile")}>
             <ProfileIcon
               fill={pathMatchRoute("/profile") ? "#2c2c2c" : "#8f8f8f"}
-              width='36px'
-              height='36px'
+              width='25px'
+              height='25px'
             />
             <p
               className={
