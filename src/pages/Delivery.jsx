@@ -135,8 +135,8 @@ function Delivery({ orders }) {
 
         {dayUsersArray.map((us, i) => {
           return (
-            <div className='deliveryBox'>
-              <div key={i} className='userItem'>
+            <div className='deliveryBox' key={i}>
+              <div className='userItem'>
                 <div className='userItemName'>{us.data.name}</div>
                 <div className='userItemStreet'>{us.data.street}</div>
                 <div className='userItemTown'>{us.data.town}</div>
