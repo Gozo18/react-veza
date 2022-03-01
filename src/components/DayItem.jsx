@@ -108,7 +108,7 @@ function DayItem({ orders }) {
       </div>
     );
   } else {
-    return <p>No orders</p>;
+    return <p>Žádné objednávky</p>;
   }
 }
 
