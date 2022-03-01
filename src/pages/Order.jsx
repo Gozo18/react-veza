@@ -23,7 +23,7 @@ function Order({ orders }) {
         setWeekOffer(weekData);
         setLoading(false);
       } else {
-        toast.error("No such document!");
+        toast.error("Nemohu načíst data!");
       }
     };
 

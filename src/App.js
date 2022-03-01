@@ -34,7 +34,7 @@ function App() {
         });
         setOrders(orderInfo);
       } catch (error) {
-        toast.error("Could not fetch data!");
+        toast.error("Nemohu načíst data!");
       }
     };
 

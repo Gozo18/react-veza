@@ -61,7 +61,7 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Něco se pokazilo!");
     }
   };
 

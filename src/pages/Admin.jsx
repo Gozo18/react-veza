@@ -39,7 +39,7 @@ function Admin({ orders }) {
         });
         setUsers(orderInfo);
       } catch (error) {
-        toast.error("Could not fetch data!");
+        toast.error("Nemohu načíst data!");
       }
     };
 
@@ -55,7 +55,7 @@ function Admin({ orders }) {
           navigate("/profile");
         }
       } catch (error) {
-        toast.error("Could not fetch data!");
+        toast.error("Nemohu načíst data!");
       }
     };
 
@@ -68,7 +68,7 @@ function Admin({ orders }) {
         setWeekOffer(weekData);
         setLoading(false);
       } else {
-        toast.error("No such document!");
+        toast.error("Nemohu načíst data!");
       }
     };
 
@@ -210,9 +210,9 @@ function Admin({ orders }) {
         priceSu5: weekOffer.priceSu5,
         priceSu6: weekOffer.priceSu6,
       });
-      toast.success("Week Offer updated");
+      toast.success("Týdenní nabídka změněna!");
     } catch (error) {
-      toast.error("Could not update profile");
+      toast.error("Nelze změnit týdenní nabídku!");
     }
   };
 

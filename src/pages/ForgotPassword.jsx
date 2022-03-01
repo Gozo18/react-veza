@@ -14,9 +14,9 @@ function ForgotPassword() {
     try {
       const auth = getAuth();
       await sendPasswordResetEmail(auth, email);
-      toast.success("Email was sent");
+      toast.success("E-mail odeslán!");
     } catch (error) {
-      toast.error("Could not send reset email");
+      toast.error("Nelze odeslat e-mail!");
     }
   };
   return (

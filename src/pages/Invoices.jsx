@@ -35,7 +35,7 @@ function Invoices() {
         setOrders(orderInfo);
         setLoading(false);
       } catch (error) {
-        toast.error("Could not fetch data!");
+        toast.error("Nemohu načíst data!");
       }
     };
 

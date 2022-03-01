@@ -74,7 +74,7 @@ function WeekDayOrder({
       setOrderMade(true);
       window.location.reload();
     } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Něco se pokazilo!");
     }
   };
 
@@ -134,7 +134,7 @@ function WeekDayOrder({
   return (
     <>
       {orderMade ? (
-        <p>Order made</p>
+        <p>Objednáno</p>
       ) : (
         <form onSubmit={onSubmit}>
           <ol className='dayList'>

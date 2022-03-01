@@ -39,7 +39,7 @@ function Delivery({ orders }) {
         });
         setUsers(orderInfo);
       } catch (error) {
-        toast.error("Could not fetch data!");
+        toast.error("Nemohu načíst data!");
       }
     };
 
@@ -55,7 +55,7 @@ function Delivery({ orders }) {
           navigate("/profile");
         }
       } catch (error) {
-        toast.error("Could not fetch data!");
+        toast.error("Nemohu načíst data!");
       }
     };
 

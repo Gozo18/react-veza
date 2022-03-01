@@ -40,7 +40,7 @@ function CalendarDays({ orders }) {
         });
         setUsers(orderInfo);
       } catch (error) {
-        toast.error("Could not fetch data!");
+        toast.error("Nemohu načíst data!");
       }
     };
 
@@ -56,7 +56,7 @@ function CalendarDays({ orders }) {
           navigate("/profile");
         }
       } catch (error) {
-        toast.error("Could not fetch data!");
+        toast.error("Nemohu načíst data!");
       }
     };
 

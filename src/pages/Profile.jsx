@@ -25,7 +25,7 @@ function Profile() {
         setUser(userInfo);
         setLoading(false);
       } catch (error) {
-        toast.error("Could not fetch user!");
+        toast.error("Nemohu načíst data!");
       }
     };
 
@@ -52,9 +52,9 @@ function Profile() {
         email: user.email,
         timestamp: user.timestamp,
       });
-      toast.success("Profile updated");
+      toast.success("Osobní údaje změněny!");
     } catch (error) {
-      toast.error("Could not update profile");
+      toast.error("Nelze změnit údaje!");
     }
   };
 

@@ -38,7 +38,7 @@ function SignIn() {
         navigate("/");
       }
     } catch (error) {
-      toast.error("Bad User Credentials");
+      toast.error("Nesprávné přihlašovací údaje!");
     }
   };
 
