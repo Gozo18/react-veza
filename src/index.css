@@ -166,7 +166,7 @@ h4 {
 }
 
 .signInHeader {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .signInHeader p {
@@ -372,6 +372,7 @@ h4 {
   background-color: #da201a;
   border-radius: 5px;
   font-size: 1rem;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
 }
 
 /* Week styling */
@@ -449,6 +450,7 @@ h4 {
   cursor: pointer;
   border-radius: 30px;
   font-weight: bold;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
 }
 
 .weekDayButtonBox {
@@ -466,6 +468,7 @@ h4 {
   font-size: 1rem;
   font-weight: bold;
   color: #ffffff;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
   cursor: pointer;
 }
 
@@ -578,6 +581,7 @@ h4 {
   border-radius: 5px;
   color: #ffffff;
   font-weight: bold;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
 }
 
 .adminBox,
