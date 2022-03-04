@@ -30,7 +30,7 @@ button {
 }
 
 main {
-  margin-bottom: 90px;
+  margin-bottom: 75px;
 }
 
 h4 {
@@ -191,7 +191,7 @@ h4 {
   left: 0;
   bottom: 0;
   right: 0;
-  height: 70px;
+  height: 55px;
   background-color: #ffffff;
   z-index: 1000;
   display: flex;
@@ -203,7 +203,7 @@ h4 {
 .navbarNav {
   width: 100%;
   max-width: 900px;
-  margin-top: 0.75rem;
+  margin-top: 0.5rem;
   overflow-y: hidden;
 }
 
@@ -226,7 +226,7 @@ h4 {
 .navbarListItemNameActive {
   margin-top: 0.25rem;
   margin-bottom: 0.5rem;
-  font-size: 14px;
+  font-size: 0.7rem;
   font-weight: 600;
   color: #8f8f8f;
 }

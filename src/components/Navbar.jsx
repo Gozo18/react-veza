@@ -31,8 +31,8 @@ function Navbar() {
             <li className='navbarListItem' onClick={() => navigate("/users")}>
               <UsersIcon
                 fill={pathMatchRoute("/users") ? "#2c2c2c" : "#8f8f8f"}
-                width='25px'
-                height='25px'
+                width='20px'
+                height='20px'
               />
               <p
                 className={
@@ -50,8 +50,8 @@ function Navbar() {
             >
               <PscIcon
                 fill={pathMatchRoute("/delivery") ? "#2c2c2c" : "#8f8f8f"}
-                width='25px'
-                height='25px'
+                width='20px'
+                height='20px'
               />
               <p
                 className={
@@ -69,8 +69,8 @@ function Navbar() {
             >
               <CalendarIcon
                 fill={pathMatchRoute("/calendar") ? "#2c2c2c" : "#8f8f8f"}
-                width='25px'
-                height='25px'
+                width='20px'
+                height='20px'
               />
               <p
                 className={
@@ -85,8 +85,8 @@ function Navbar() {
             <li className='navbarListItem' onClick={() => navigate("/admin")}>
               <EditIcon
                 fill={pathMatchRoute("/admin") ? "#2c2c2c" : "#8f8f8f"}
-                width='25px'
-                height='25px'
+                width='20px'
+                height='20px'
               />
               <p
                 className={
@@ -101,8 +101,8 @@ function Navbar() {
             <li className='navbarListItem' onClick={() => navigate("/profile")}>
               <ArrowIcon
                 fill={pathMatchRoute("/profile") ? "#2c2c2c" : "#8f8f8f"}
-                width='25px'
-                height='25px'
+                width='20px'
+                height='20px'
               />
               <p
                 className={
@@ -135,8 +135,8 @@ function Navbar() {
           <li className='navbarListItem' onClick={() => navigate("/")}>
             <OrderIcon
               fill={pathMatchRoute("/") ? "#2c2c2c" : "#8f8f8f"}
-              width='25px'
-              height='25px'
+              width='20px'
+              height='20px'
             />
             <p
               className={
@@ -151,8 +151,8 @@ function Navbar() {
           <li className='navbarListItem' onClick={() => navigate("/invoices")}>
             <InvoiceIcon
               fill={pathMatchRoute("/invoices") ? "#2c2c2c" : "#8f8f8f"}
-              width='25px'
-              height='25px'
+              width='20px'
+              height='20px'
             />
             <p
               className={
@@ -167,8 +167,8 @@ function Navbar() {
           <li className='navbarListItem' onClick={() => navigate("/profile")}>
             <ProfileIcon
               fill={pathMatchRoute("/profile") ? "#2c2c2c" : "#8f8f8f"}
-              width='25px'
-              height='25px'
+              width='20px'
+              height='20px'
             />
             <p
               className={
