@@ -69,7 +69,7 @@ function SignUp() {
     <>
       <div className='pageContainer'>
         <header className='regHeader'>
-          <p className='pageHeader'>Venuše Zaječí</p>
+          <p className='pageHeader'>Objednávky obědů</p>
         </header>
 
         <main>

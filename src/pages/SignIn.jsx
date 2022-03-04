@@ -46,7 +46,7 @@ function SignIn() {
     <>
       <div className='pageContainer'>
         <header className='signInHeader'>
-          <p className='pageHeader'>Venuše Zaječí</p>
+          <p className='pageHeader'>Objednávky obědů</p>
         </header>
 
         <main>
