@@ -15,6 +15,7 @@ body {
   max-width: 900px;
   box-sizing: border-box;
   color: #2c2c2c;
+  font-size: 0.8rem;
 }
 
 a {
@@ -160,7 +161,7 @@ h4 {
 
 .pageHeader {
   width: 100%;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: bold;
   text-align: center;
 }
@@ -364,9 +365,9 @@ h4 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 42px;
+  height: 34px;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: #ffffff;
   background-color: #da201a;
@@ -462,10 +463,10 @@ h4 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 42px;
+  height: 34px;
   background-color: #00cc66;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   color: #ffffff;
   box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
@@ -555,10 +556,11 @@ h4 {
   margin: 10px 0;
   padding: 0 20px;
   width: 100%;
-  height: 45px;
+  height: 34px;
   border: 0;
   background: #f2f4f8;
   border-radius: 5px;
+  font-size: 0.8rem;
 }
 
 .profileBoxInput {
@@ -576,11 +578,12 @@ h4 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 42px;
+  height: 34px;
   background: #1667ff;
   border-radius: 5px;
   color: #ffffff;
   font-weight: bold;
+  font-size: 0.8rem;
   box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
 }
 
@@ -648,8 +651,9 @@ h4 {
 .adminBox input {
   margin: 10px 0;
   padding: 0 20px;
-  height: 45px;
+  height: 34px;
   border: 0;
   background: #f2f4f8;
   border-radius: 5px;
+  font-size: 0.8rem;
 }
