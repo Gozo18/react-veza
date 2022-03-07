@@ -92,7 +92,7 @@ function Invoices() {
               return <OrderItem order={order.data} key={i} />;
             }
 
-            return <div key={i}></div>;
+            return null;
           })}
 
           <MonthOrderItem orders={orders} value={value} />
