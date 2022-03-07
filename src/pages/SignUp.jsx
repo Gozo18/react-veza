@@ -56,6 +56,7 @@ function SignUp() {
       delete formDataCopy.password;
       formDataCopy.timestamp = serverTimestamp();
       formDataCopy.userRef = user.uid;
+      formDataCopy.admin = false;
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
 

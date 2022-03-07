@@ -6,7 +6,6 @@ import Spinner from "../components/Spinner";
 import OrderItem from "../components/OrderItem";
 import { toast } from "react-toastify";
 import Calendar from "react-calendar";
-import { isEqual } from "date-fns";
 import "react-calendar/dist/Calendar.css";
 
 function Invoices() {
@@ -50,12 +49,12 @@ function Invoices() {
     const orderedDays = [];
 
     orders.map((order) => {
-      orderedDays.push(order.data.date.toDate());
+      orderedDays.push(order.data.date.toDate().toLocaleDateString());
 
       return orderedDays;
     });
 
-    if (orderedDays.find((x) => isEqual(x, date))) {
+    if (orderedDays.find((x) => x === date.toLocaleDateString())) {
       return "highlight";
     }
   }

@@ -13,7 +13,6 @@ import { getAuth } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import Calendar from "react-calendar";
-import { isEqual } from "date-fns";
 import "react-calendar/dist/Calendar.css";
 import DayItem from "../components/DayItem";
 
@@ -73,12 +72,12 @@ function CalendarDays({ orders }) {
     const orderedDays = [];
 
     orders.map((order) => {
-      orderedDays.push(order.data.date.toDate());
+      orderedDays.push(order.data.date.toDate().toLocaleDateString());
 
       return orderedDays;
     });
 
-    if (orderedDays.find((x) => isEqual(x, date))) {
+    if (orderedDays.find((x) => x === date.toLocaleDateString())) {
       return "highlight";
     }
   }
