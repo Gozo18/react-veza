@@ -11,8 +11,6 @@ function MonthOrderItem({ orders, value }) {
     return orderedMonth;
   });
 
-  /* console.log(orderedMonth); */
-
   orderedMonth.map((order) => {
     const amount =
       Number(order.data.no1) +
