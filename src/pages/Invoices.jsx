@@ -7,6 +7,7 @@ import OrderItem from "../components/OrderItem";
 import { toast } from "react-toastify";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import MonthOrderItem from "../components/MonthOrderItem";
 
 function Invoices() {
   const auth = getAuth();
@@ -80,6 +81,10 @@ function Invoices() {
             Zvolené datum: <b>{value.toLocaleDateString()}</b>
           </p>
 
+          <p className='orderDate'>
+            Zvolené datum: <b>{value.getMonth() + 1}</b>
+          </p>
+
           {orders.map((order, i) => {
             const orderTime = order.data.date.toDate().toLocaleDateString();
             const valueTime = value.toLocaleDateString();
@@ -89,6 +94,8 @@ function Invoices() {
 
             return <div key={i}></div>;
           })}
+
+          <MonthOrderItem orders={orders} value={value} />
         </main>
       ) : (
         <div className='orderItems'>

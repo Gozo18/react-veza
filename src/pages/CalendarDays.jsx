@@ -15,6 +15,7 @@ import Spinner from "../components/Spinner";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 import DayItem from "../components/DayItem";
+import TotalMonthOrders from "../components/TotalMonthOrders";
 
 function CalendarDays({ orders }) {
   const auth = getAuth();
@@ -119,6 +120,8 @@ function CalendarDays({ orders }) {
         </p>
 
         <DayItem orders={dayOrdersArray} />
+
+        <TotalMonthOrders orders={orders} value={value} />
       </main>
     </div>
   );
