@@ -125,6 +125,7 @@ function Admin({ orders }) {
         DateFr: weekOffer.DateFr,
         DateSa: weekOffer.DateSa,
         DateSu: weekOffer.DateSu,
+        MoSoup: weekOffer.MoSoup,
         Mo1: weekOffer.Mo1,
         Mo2: weekOffer.Mo2,
         Mo3: weekOffer.Mo3,
@@ -137,6 +138,7 @@ function Admin({ orders }) {
         priceMo4: weekOffer.priceMo4,
         priceMo5: weekOffer.priceMo5,
         priceMo6: weekOffer.priceMo6,
+        TuSoup: weekOffer.TuSoup,
         Tu1: weekOffer.Tu1,
         Tu2: weekOffer.Tu2,
         Tu3: weekOffer.Tu3,
@@ -149,6 +151,7 @@ function Admin({ orders }) {
         priceTu4: weekOffer.priceTu4,
         priceTu5: weekOffer.priceTu5,
         priceTu6: weekOffer.priceTu6,
+        WeSoup: weekOffer.WeSoup,
         We1: weekOffer.We1,
         We2: weekOffer.We2,
         We3: weekOffer.We3,
@@ -161,6 +164,7 @@ function Admin({ orders }) {
         priceWe4: weekOffer.priceWe4,
         priceWe5: weekOffer.priceWe5,
         priceWe6: weekOffer.priceWe6,
+        ThSoup: weekOffer.ThSoup,
         Th1: weekOffer.Th1,
         Th2: weekOffer.Th2,
         Th3: weekOffer.Th3,
@@ -173,6 +177,7 @@ function Admin({ orders }) {
         priceTh4: weekOffer.priceTh4,
         priceTh5: weekOffer.priceTh5,
         priceTh6: weekOffer.priceTh6,
+        FrSoup: weekOffer.FrSoup,
         Fr1: weekOffer.Fr1,
         Fr2: weekOffer.Fr2,
         Fr3: weekOffer.Fr3,
@@ -185,6 +190,7 @@ function Admin({ orders }) {
         priceFr4: weekOffer.priceFr4,
         priceFr5: weekOffer.priceFr5,
         priceFr6: weekOffer.priceFr6,
+        SaSoup: weekOffer.SaSoup,
         Sa1: weekOffer.Sa1,
         Sa2: weekOffer.Sa2,
         Sa3: weekOffer.Sa3,
@@ -197,6 +203,7 @@ function Admin({ orders }) {
         priceSa4: weekOffer.priceSa4,
         priceSa5: weekOffer.priceSa5,
         priceSa6: weekOffer.priceSa6,
+        SuSoup: weekOffer.SuSoup,
         Su1: weekOffer.Su1,
         Su2: weekOffer.Su2,
         Su3: weekOffer.Su3,
@@ -231,6 +238,7 @@ function Admin({ orders }) {
       DateFr,
       DateSa,
       DateSu,
+      MoSoup,
       Mo1,
       Mo2,
       Mo3,
@@ -243,6 +251,7 @@ function Admin({ orders }) {
       priceMo4,
       priceMo5,
       priceMo6,
+      TuSoup,
       Tu1,
       Tu2,
       Tu3,
@@ -255,6 +264,7 @@ function Admin({ orders }) {
       priceTu4,
       priceTu5,
       priceTu6,
+      WeSoup,
       We1,
       We2,
       We3,
@@ -267,6 +277,7 @@ function Admin({ orders }) {
       priceWe4,
       priceWe5,
       priceWe6,
+      ThSoup,
       Th1,
       Th2,
       Th3,
@@ -279,6 +290,7 @@ function Admin({ orders }) {
       priceTh4,
       priceTh5,
       priceTh6,
+      FrSoup,
       Fr1,
       Fr2,
       Fr3,
@@ -291,6 +303,7 @@ function Admin({ orders }) {
       priceFr4,
       priceFr5,
       priceFr6,
+      SaSoup,
       Sa1,
       Sa2,
       Sa3,
@@ -303,6 +316,7 @@ function Admin({ orders }) {
       priceSa4,
       priceSa5,
       priceSa6,
+      SuSoup,
       Su1,
       Su2,
       Su3,
@@ -424,9 +438,9 @@ function Admin({ orders }) {
         </header>
 
         <main>
-          <div className='adminBox'>Počet objednávek: {numOr}</div>
+          {/* <div className='adminBox'>Počet objednávek: {numOr}</div>
           <div className='adminBox'>Počet obědů: {sum}</div>
-          <div className='adminBox'>Počet uživatelů: {numUs}</div>
+          <div className='adminBox'>Počet uživatelů: {numUs}</div> */}
 
           <div className='adminBox'>
             <h4>Týdenní nabídka</h4>
@@ -439,6 +453,13 @@ function Admin({ orders }) {
                   value={moDate}
                   onChange={onChangeDate}
                   className='weekOfferDate'
+                />
+                <input
+                  type='text'
+                  id='MoSoup'
+                  value={MoSoup}
+                  onChange={onChange}
+                  className='weekOffer'
                 />
                 <input
                   type='text'
@@ -536,6 +557,13 @@ function Admin({ orders }) {
                 />
                 <input
                   type='text'
+                  id='TuSoup'
+                  value={TuSoup}
+                  onChange={onChange}
+                  className='weekOffer'
+                />
+                <input
+                  type='text'
                   id='Tu1'
                   value={Tu1}
                   onChange={onChange}
@@ -627,6 +655,13 @@ function Admin({ orders }) {
                   value={weDate}
                   onChange={onChangeDate}
                   className='weekOfferDate'
+                />
+                <input
+                  type='text'
+                  id='WeSoup'
+                  value={WeSoup}
+                  onChange={onChange}
+                  className='weekOffer'
                 />
                 <input
                   type='text'
@@ -724,6 +759,13 @@ function Admin({ orders }) {
                 />
                 <input
                   type='text'
+                  id='ThSoup'
+                  value={ThSoup}
+                  onChange={onChange}
+                  className='weekOffer'
+                />
+                <input
+                  type='text'
                   id='Th1'
                   value={Th1}
                   onChange={onChange}
@@ -815,6 +857,13 @@ function Admin({ orders }) {
                   value={frDate}
                   onChange={onChangeDate}
                   className='weekOfferDate'
+                />
+                <input
+                  type='text'
+                  id='FrSoup'
+                  value={FrSoup}
+                  onChange={onChange}
+                  className='weekOffer'
                 />
                 <input
                   type='text'
@@ -912,6 +961,13 @@ function Admin({ orders }) {
                 />
                 <input
                   type='text'
+                  id='SaSoup'
+                  value={SaSoup}
+                  onChange={onChange}
+                  className='weekOffer'
+                />
+                <input
+                  type='text'
                   id='Sa1'
                   value={Sa1}
                   onChange={onChange}
@@ -1003,6 +1059,13 @@ function Admin({ orders }) {
                   value={suDate}
                   onChange={onChangeDate}
                   className='weekOfferDate'
+                />
+                <input
+                  type='text'
+                  id='SuSoup'
+                  value={SuSoup}
+                  onChange={onChange}
+                  className='weekOffer'
                 />
                 <input
                   type='text'
@@ -1108,9 +1171,9 @@ function Admin({ orders }) {
         </header>
 
         <main>
-          <div className='adminBox'>Počet objednávek: {numOr}</div>
+          {/* <div className='adminBox'>Počet objednávek: {numOr}</div>
           <div className='adminBox'>Počet obědů: {sum}</div>
-          <div className='adminBox'>Počet uživatelů: {numUs}</div>
+          <div className='adminBox'>Počet uživatelů: {numUs}</div> */}
 
           <p>Načítám...</p>
         </main>

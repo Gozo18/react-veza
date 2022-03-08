@@ -63,6 +63,7 @@ function Order({ orders }) {
               <h4>Pondělí {moDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateMo}
+                daySoup={weekOffer.MoSoup}
                 no1Name={weekOffer.Mo1}
                 no2Name={weekOffer.Mo2}
                 no3Name={weekOffer.Mo3}
@@ -82,6 +83,7 @@ function Order({ orders }) {
               <h4>Úterý {tuDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateTu}
+                daySoup={weekOffer.TuSoup}
                 no1Name={weekOffer.Tu1}
                 no2Name={weekOffer.Tu2}
                 no3Name={weekOffer.Tu3}
@@ -101,6 +103,7 @@ function Order({ orders }) {
               <h4>Středa {weDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateWe}
+                daySoup={weekOffer.WeSoup}
                 no1Name={weekOffer.We1}
                 no2Name={weekOffer.We2}
                 no3Name={weekOffer.We3}
@@ -120,6 +123,7 @@ function Order({ orders }) {
               <h4>Čtvrtek {thDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateTh}
+                daySoup={weekOffer.ThSoup}
                 no1Name={weekOffer.Th1}
                 no2Name={weekOffer.Th2}
                 no3Name={weekOffer.Th3}
@@ -139,6 +143,7 @@ function Order({ orders }) {
               <h4>Pátek {frDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateFr}
+                daySoup={weekOffer.FrSoup}
                 no1Name={weekOffer.Fr1}
                 no2Name={weekOffer.Fr2}
                 no3Name={weekOffer.Fr3}
@@ -158,6 +163,7 @@ function Order({ orders }) {
               <h4>Sobota {saDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateSa}
+                daySoup={weekOffer.SaSoup}
                 no1Name={weekOffer.Sa1}
                 no2Name={weekOffer.Sa2}
                 no3Name={weekOffer.Sa3}
@@ -177,6 +183,7 @@ function Order({ orders }) {
               <h4>Neděle {suDate}</h4>
               <WeekDayOrder
                 dayDate={weekOffer.DateSu}
+                daySoup={weekOffer.SuSoup}
                 no1Name={weekOffer.Su1}
                 no2Name={weekOffer.Su2}
                 no3Name={weekOffer.Su3}

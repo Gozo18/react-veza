@@ -7,6 +7,7 @@ import { isEqual } from "date-fns";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 
 function WeekDayOrder({
+  daySoup,
   no1Name,
   no2Name,
   no3Name,
@@ -138,6 +139,9 @@ function WeekDayOrder({
       ) : (
         <form onSubmit={onSubmit}>
           <ol className='dayList'>
+            <li className='weekItem'>
+              <div className='weekItemText'>Polévka: {daySoup}</div>
+            </li>
             <li className='weekItem'>
               <div className='weekItemText'>1. {no1Name}</div>
               <div className='weekItemPrice'>{priceNo1},- Kč</div>
