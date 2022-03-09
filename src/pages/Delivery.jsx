@@ -144,19 +144,19 @@ function Delivery({ orders }) {
           Zvolené datum: <b>{value.toLocaleDateString()}</b>
         </p>
 
-        {dayUsersArray.map((us, i) => {
-          return (
-            <div className='deliveryBox' key={i}>
-              <div className='userItem'>
+        <div className='deliveryBox'>
+          {dayUsersArray.map((us, i) => {
+            return (
+              <div className='userItem' key={i}>
                 <div className='userItemName'>{us.data.name}</div>
                 <div className='userItemStreet'>{us.data.street}</div>
                 <div className='userItemTown'>{us.data.town}</div>
                 <div className='userItemPsc'>{us.data.psc}</div>
                 <div className='userItemPhone'>tel.: {us.data.phone}</div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </main>
     </div>
   );
