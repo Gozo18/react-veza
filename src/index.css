@@ -622,6 +622,39 @@ h4 {
   background: #ffffff;
 }
 
+.userHeaderBox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.userHeader {
+  width: 40%;
+}
+
+.userHeader h4 {
+  margin: 0;
+}
+
+.userHeaderInputBox {
+  width: 60%;
+}
+
+.userHeaderInputBox input {
+  padding: 0 20px 0 40px;
+  width: 100%;
+  height: 34px;
+  border: 0;
+  background: #f2f4f8;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  background: url("./assets/svg/searchIcon.svg") #f2f4f8 2.5% center no-repeat;
+}
+
+.userHeaderInputBox input:focus-visible {
+  outline-width: 0;
+}
+
 .userItem {
   display: flex;
   flex-wrap: wrap;
@@ -634,7 +667,8 @@ h4 {
 }
 
 .userItemName,
-.userItemPhone {
+.userItemPhone,
+.userItemEmail {
   width: 100%;
 }
 

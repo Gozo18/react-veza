@@ -110,6 +110,18 @@ function Delivery({ orders }) {
     return null;
   });
 
+  function compare(a, b) {
+    if (a.data.town < b.data.town) {
+      return -1;
+    }
+    if (a.data.town > b.data.town) {
+      return 1;
+    }
+    return 0;
+  }
+
+  dayUsersArray.sort(compare);
+
   if (loading) {
     return <Spinner />;
   }

@@ -12,12 +12,14 @@ import { toast } from "react-toastify";
 import { getAuth } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
+import UserDataSearch from "../components/UserDataSearch";
 
 function Users() {
   const auth = getAuth();
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [user, setUser] = useState([]);
+  const undataUsers = [];
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -62,11 +64,25 @@ function Users() {
 
   const numUs = users.length;
 
+  function compare(a, b) {
+    if (a.data.name < b.data.name) {
+      return -1;
+    }
+    if (a.data.name > b.data.name) {
+      return 1;
+    }
+    return 0;
+  }
+
+  users.sort(compare);
+
+  users.map((user) => {
+    undataUsers.push(user.data);
+  });
+
   if (loading) {
     return <Spinner />;
   }
-
-  /* console.log(users); */
 
   return (
     <div className='pageContainer'>
@@ -76,20 +92,7 @@ function Users() {
 
       <main>
         <div className='userBox'>Počet zákazníků: {numUs}</div>
-        <div className='userBox'>
-          <h4>List uživatelů</h4>
-          {users.map((us, i) => {
-            return (
-              <div key={i} className='userItem'>
-                <div className='userItemName'>{us.data.name}</div>
-                <div className='userItemStreet'>{us.data.street}</div>
-                <div className='userItemTown'>{us.data.town}</div>
-                <div className='userItemPsc'>{us.data.psc}</div>
-                <div className='userItemPhone'>tel.: {us.data.phone}</div>
-              </div>
-            );
-          })}
-        </div>
+        <UserDataSearch users={undataUsers} />
       </main>
     </div>
   );
