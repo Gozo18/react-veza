@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
+import TownDataSearch from "../components/TownDataSearch";
 
 function Delivery({ orders }) {
   const auth = getAuth();
@@ -103,18 +104,16 @@ function Delivery({ orders }) {
   dayRefArray.map((dayUser, i) => {
     users.map((user, i) => {
       if (dayUser === user.data.userRef) {
-        dayUsersArray.push(user);
+        dayUsersArray.push(user.data);
       }
-      return null;
     });
-    return null;
   });
 
   function compare(a, b) {
-    if (a.data.town < b.data.town) {
+    if (a.town < b.town) {
       return -1;
     }
-    if (a.data.town > b.data.town) {
+    if (a.town > b.town) {
       return 1;
     }
     return 0;
@@ -144,19 +143,7 @@ function Delivery({ orders }) {
           Zvolené datum: <b>{value.toLocaleDateString()}</b>
         </p>
 
-        <div className='deliveryBox'>
-          {dayUsersArray.map((us, i) => {
-            return (
-              <div className='userItem' key={i}>
-                <div className='userItemName'>{us.data.name}</div>
-                <div className='userItemStreet'>{us.data.street}</div>
-                <div className='userItemTown'>{us.data.town}</div>
-                <div className='userItemPsc'>{us.data.psc}</div>
-                <div className='userItemPhone'>tel.: {us.data.phone}</div>
-              </div>
-            );
-          })}
-        </div>
+        <TownDataSearch users={dayUsersArray} />
       </main>
     </div>
   );

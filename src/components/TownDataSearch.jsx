@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function UserDataSearch({ users }) {
+function TownDataSearch({ users }) {
   const [filterData, setFilterData] = useState([]);
 
   useEffect(() => {
@@ -10,7 +10,7 @@ function UserDataSearch({ users }) {
   const onChange = (e) => {
     const searchTerm = e.target.value.toLowerCase();
     const filteredUsers = users.filter((v) => {
-      return v.name.toLowerCase().match(new RegExp(searchTerm, "g"));
+      return v.town.toLowerCase().match(new RegExp(searchTerm, "g"));
     });
     setFilterData(filteredUsers);
     console.log(filterData);
@@ -23,7 +23,7 @@ function UserDataSearch({ users }) {
           <h4>List uživatelů</h4>
         </div>
         <div className='userHeaderInputBox'>
-          <input type='text' onChange={onChange} placeholder='Napište jméno' />
+          <input type='text' onChange={onChange} placeholder='Napište město' />
         </div>
       </div>
       {filterData.map((us, i) => {
@@ -42,4 +42,4 @@ function UserDataSearch({ users }) {
   );
 }
 
-export default UserDataSearch;
+export default TownDataSearch;
