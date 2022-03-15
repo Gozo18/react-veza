@@ -47,6 +47,8 @@ main {
 
 h4 {
   margin-top: 0;
+  font-weight: normal;
+  text-align: center;
 }
 
 .input,
@@ -174,6 +176,8 @@ h4 {
   }
 }
 
+/* Navbar */
+
 .navbar {
   position: fixed;
   left: 0;
@@ -235,6 +239,8 @@ h4 {
 .navbarListItemNameActive {
   color: #2c2c2c;
 }
+
+/* Forms */
 
 .nameInput {
   margin-bottom: 2rem;
@@ -591,6 +597,7 @@ h4 {
 
 @media (min-width: 1024px) {
   .profileBox input {
+    padding: 0 70px;
     font-size: 1rem;
   }
 }
@@ -650,6 +657,7 @@ h4 {
 
 .userHeader h4 {
   margin: 0;
+  text-align: left;
 }
 
 .userHeaderInputBox {
