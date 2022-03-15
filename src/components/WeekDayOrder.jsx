@@ -48,7 +48,7 @@ function WeekDayOrder({
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
-      [e.target.id]: e.target.value,
+      [e.target.id]: Number(e.target.value),
       no1Text: no1Name,
       no2Text: no2Name,
       no3Text: no3Name,
