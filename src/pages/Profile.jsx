@@ -106,6 +106,7 @@ function Profile() {
               value={user.psc}
               onChange={onChange}
               className='pscInput'
+              onInput={(e) => (e.target.value = e.target.value.slice(0, 5))}
             />
             <input
               type='text'
@@ -113,6 +114,7 @@ function Profile() {
               value={user.phone}
               onChange={onChange}
               className='phoneInput profileBoxInput'
+              onInput={(e) => (e.target.value = e.target.value.slice(0, 9))}
             />
             <div className='weekDayButtonBox'>
               <button className='weekDayButton'>
