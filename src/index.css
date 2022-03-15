@@ -58,15 +58,15 @@ h4 {
 .pscInput,
 .phoneInput,
 .textarea {
-  box-shadow: rgba(0, 0, 0, 0.11);
-  border: none;
-  background: #f2f4f8;
-  border-radius: 5px;
-  height: 3rem;
+  padding: 0 3rem;
   width: 100%;
+  height: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.11);
+  background: #f2f4f8;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
   outline: none;
   font-family: "Montserrat", sans-serif;
-  padding: 0 3rem;
   font-size: 0.8rem;
 }
 @media (min-width: 1024px) {
@@ -397,6 +397,8 @@ h4 {
   padding: 20px 10px;
   list-style: none;
   background-color: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
 }
 
 .weekDay p {
@@ -441,9 +443,9 @@ h4 {
 .weekItemInput input {
   width: 40%;
   height: 100%;
-  border: 0;
   background: #f2f4f8;
   text-align: center;
+  border: 1px solid #e1e1e1;
   border-radius: 5px;
 }
 
@@ -464,6 +466,10 @@ h4 {
 
 .weekDayButtonBox {
   margin: 0;
+}
+
+.adminButtonBox {
+  margin: 20px 0 10px;
 }
 
 .weekDayButton {
@@ -498,6 +504,8 @@ h4 {
   margin-top: 20px;
   padding: 20px 10px;
   background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
 }
 
 .orderItemBox {
@@ -524,6 +532,10 @@ h4 {
 .calendarBox {
   display: flex;
   justify-content: center;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 5px;
+  background: #fff;
 }
 
 .react-calendar {
@@ -564,6 +576,8 @@ h4 {
 .profileBox {
   padding: 20px 10px;
   background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
 }
 
 .profileBox input {
@@ -571,7 +585,7 @@ h4 {
   padding: 0 20px;
   width: 100%;
   height: 34px;
-  border: 0;
+  border: 1px solid #e1e1e1;
   background: #f2f4f8;
   border-radius: 5px;
   font-size: 0.8rem;
@@ -591,6 +605,8 @@ h4 {
   margin: 20px 0;
   padding: 20px 10px;
   background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
 }
 
 .adminLink {
@@ -620,6 +636,8 @@ h4 {
   margin: 0 0 20px;
   padding: 20px 10px;
   background: #ffffff;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
 }
 
 .userHeaderBox {
@@ -644,11 +662,11 @@ h4 {
   padding: 0 20px 0 40px;
   width: 100%;
   height: 34px;
-  border: 0;
   background: #f2f4f8;
-  border-radius: 5px;
   font-size: 0.8rem;
   background: url("./assets/svg/searchIcon.svg") #f2f4f8 2.5% center no-repeat;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
 }
 
 .userHeaderInputBox input:focus-visible {
@@ -712,8 +730,8 @@ h4 {
   margin: 10px 0;
   padding: 0 20px;
   height: 34px;
-  border: 0;
   background: #f2f4f8;
+  border: 1px solid #e1e1e1;
   border-radius: 5px;
   font-size: 0.8rem;
 }

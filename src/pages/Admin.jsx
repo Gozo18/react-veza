@@ -1152,7 +1152,7 @@ function Admin({ orders }) {
                   className='weekOfferPrice'
                 />
               </div>
-              <div className='weekDayButtonBox'>
+              <div className='adminButtonBox'>
                 <button className='weekDayButton'>
                   Upravit nabídku
                   <ArrowRightIcon fill='#fff' width='34px' height='34px' />
