@@ -13,7 +13,6 @@ function TownDataSearch({ users }) {
       return v.town.toLowerCase().match(new RegExp(searchTerm, "g"));
     });
     setFilterData(filteredUsers);
-    console.log(filterData);
   };
 
   return (

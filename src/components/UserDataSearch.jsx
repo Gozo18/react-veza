@@ -13,7 +13,6 @@ function UserDataSearch({ users }) {
       return v.name.toLowerCase().match(new RegExp(searchTerm, "g"));
     });
     setFilterData(filteredUsers);
-    console.log(filterData);
   };
 
   return (
