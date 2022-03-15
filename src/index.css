@@ -186,7 +186,7 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #c3c3c3;
+  border-top: 1px solid #e1e1e1;
 }
 
 @media (min-width: 1024px) {
