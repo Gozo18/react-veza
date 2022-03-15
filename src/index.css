@@ -238,32 +238,32 @@ h4 {
 
 .nameInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/badgeIcon.svg") #f2f4f8 2.5% center no-repeat;
+  background: url("./assets/svg/user.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .streetInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/streetIcon.svg") #f2f4f8 2.5% center no-repeat;
+  background: url("./assets/svg/street.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .townInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/townIcon.svg") #f2f4f8 2.5% center no-repeat;
+  background: url("./assets/svg/town.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .pscInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/pscIcon.svg") #f2f4f8 2.5% center no-repeat;
+  background: url("./assets/svg/psc.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .phoneInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/phoneIcon.svg") #f2f4f8 2.5% center no-repeat;
+  background: url("./assets/svg/phone.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .emailInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/personIcon.svg") #f2f4f8 2.5% center no-repeat;
+  background: url("./assets/svg/email.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .passwordInputDiv {
@@ -272,7 +272,7 @@ h4 {
 
 .passwordInput {
   margin-bottom: 2rem;
-  background: url("./assets/svg/lockIcon.svg") #f2f4f8 2.5% center no-repeat;
+  background: url("./assets/svg/password.svg") #f2f4f8 2.5% center no-repeat;
 }
 
 .showPassword {
@@ -583,7 +583,7 @@ h4 {
   margin: 10px 0;
   padding: 0 50px;
   width: 100%;
-  height: 34px;
+  height: 42px;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
   font-size: 0.8rem;
@@ -665,6 +665,12 @@ h4 {
   background: url("./assets/svg/searchIcon.svg") #f2f4f8 2.5% center no-repeat;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
+}
+
+@media (min-width: 1024px) {
+  .userHeaderInputBox input {
+    padding: 0 20px 0 60px;
+  }
 }
 
 .userHeaderInputBox input:focus-visible {
