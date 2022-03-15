@@ -46,7 +46,7 @@ function SignIn() {
     <>
       <div className='pageContainer'>
         <header className='signInHeader'>
-          <p className='pageHeader'>Objednávky obědů</p>
+          <h1 className='pageHeader'>Objednávky obědů</h1>
         </header>
 
         <main>
