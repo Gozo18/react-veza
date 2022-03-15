@@ -16,33 +16,14 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "../components/Spinner";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 
-function Admin({ orders }) {
+function Admin() {
   const auth = getAuth();
   const navigate = useNavigate();
-  const [users, setUsers] = useState([]);
   const [user, setUser] = useState([]);
   const [weekOffer, setWeekOffer] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchOrders = async () => {
-      try {
-        const q = query(collection(db, "users"), where("email", "!=", null));
-
-        const orderInfo = [];
-
-        const querySnapshot = await getDocs(q);
-        querySnapshot.forEach((doc) => {
-          return orderInfo.push({
-            data: doc.data(),
-          });
-        });
-        setUsers(orderInfo);
-      } catch (error) {
-        toast.error("Nemohu načíst data!");
-      }
-    };
-
     const fetchUser = async () => {
       try {
         const docRef = doc(db, "users", auth.currentUser.uid);
@@ -74,30 +55,8 @@ function Admin({ orders }) {
 
     fetchWeek();
     fetchUser();
-    fetchOrders();
     setLoading(false);
   }, [auth.currentUser.uid, navigate, user.admin]);
-
-  const numUs = users.length;
-
-  const numOr = orders.length;
-
-  const numArray = [];
-
-  orders.map((order, i) => {
-    numArray.push(
-      Number(order.data.no1) +
-        Number(order.data.no2) +
-        Number(order.data.no3) +
-        Number(order.data.no4) +
-        Number(order.data.no5) +
-        Number(order.data.no6)
-    );
-
-    return null;
-  });
-
-  const sum = numArray.reduce((partialSum, a) => partialSum + a, 0);
 
   const onChange = (e) => {
     setWeekOffer((prevState) => ({
@@ -434,16 +393,11 @@ function Admin({ orders }) {
     return (
       <div className='pageContainer'>
         <header>
-          <p className='pageHeader'>Administrace</p>
+          <p className='pageHeader'>Týdenní nabídka</p>
         </header>
 
         <main>
-          {/* <div className='adminBox'>Počet objednávek: {numOr}</div>
-          <div className='adminBox'>Počet obědů: {sum}</div>
-          <div className='adminBox'>Počet uživatelů: {numUs}</div> */}
-
           <div className='adminBox'>
-            <h4>Týdenní nabídka</h4>
             <form onSubmit={onSubmit}>
               <div className='weekOfferBox'>
                 <div className='weekOfferDay'>Pondělí</div>

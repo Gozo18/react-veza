@@ -61,7 +61,6 @@ h4 {
   padding: 0 3rem;
   width: 100%;
   height: 3rem;
-  box-shadow: rgba(0, 0, 0, 0.11);
   background: #f2f4f8;
   border: 1px solid #e1e1e1;
   border-radius: 5px;
@@ -151,7 +150,7 @@ h4 {
 
 .signInHeader p {
   margin-bottom: 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -166,7 +165,7 @@ h4 {
 
 .regHeader p {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 1024px) {
@@ -582,11 +581,10 @@ h4 {
 
 .profileBox input {
   margin: 10px 0;
-  padding: 0 20px;
+  padding: 0 50px;
   width: 100%;
   height: 34px;
   border: 1px solid #e1e1e1;
-  background: #f2f4f8;
   border-radius: 5px;
   font-size: 0.8rem;
 }
@@ -728,7 +726,7 @@ h4 {
 
 .adminBox input {
   margin: 10px 0;
-  padding: 0 20px;
+  padding: 0 10px;
   height: 34px;
   background: #f2f4f8;
   border: 1px solid #e1e1e1;

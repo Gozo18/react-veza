@@ -84,26 +84,35 @@ function Profile() {
               value={user.name}
               onChange={onChange}
               placeholder='Name'
+              className='nameInput'
             />
             <input
               type='text'
               id='street'
               value={user.street}
               onChange={onChange}
+              className='streetInput'
             />
             <input
               type='text'
               id='town'
               value={user.town}
               onChange={onChange}
+              className='townInput'
             />
-            <input type='text' id='psc' value={user.psc} onChange={onChange} />
+            <input
+              type='text'
+              id='psc'
+              value={user.psc}
+              onChange={onChange}
+              className='pscInput'
+            />
             <input
               type='text'
               id='phone'
               value={user.phone}
               onChange={onChange}
-              className='profileBoxInput'
+              className='phoneInput profileBoxInput'
             />
             <div className='weekDayButtonBox'>
               <button className='weekDayButton'>
