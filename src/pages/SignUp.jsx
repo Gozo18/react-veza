@@ -62,7 +62,12 @@ function SignUp() {
 
       navigate("/");
     } catch (error) {
-      toast.error("Něco se pokazilo!");
+      console.log(error.code);
+      if (error.code === "auth/weak-password") {
+        toast.error("Heslo musí mít minimálně 6 znaků!");
+      } else {
+        toast.error("Něco se pokazilo!");
+      }
     }
   };
 
@@ -80,7 +85,7 @@ function SignUp() {
               <input
                 type='text'
                 className='nameInput'
-                placeholder='Jméno'
+                placeholder='Jméno a Příjmení'
                 id='name'
                 value={name}
                 onChange={onChange}
@@ -104,18 +109,20 @@ function SignUp() {
               <input
                 type='number'
                 className='pscInput'
-                placeholder='PSČ'
+                placeholder='PSČ - formát 12345'
                 id='psc'
                 value={psc}
                 onChange={onChange}
+                onInput={(e) => (e.target.value = e.target.value.slice(0, 5))}
               />
               <input
                 type='number'
                 className='phoneInput'
-                placeholder='Telefon'
+                placeholder='Telefon - formát 602123456'
                 id='phone'
                 value={phone}
                 onChange={onChange}
+                onInput={(e) => (e.target.value = e.target.value.slice(0, 9))}
               />
               <input
                 type='email'
@@ -143,9 +150,6 @@ function SignUp() {
                   onClick={() => setShowPassword((prevState) => !prevState)}
                 />
               </div>
-              {/* <Link to='/forgot-password' className='forgotPasswordLink'>
-              Forgot Password
-            </Link> */}
 
               <div className='weekDayButtonBox'>
                 <button className='weekDayButton'>
