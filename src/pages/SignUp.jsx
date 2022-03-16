@@ -10,6 +10,7 @@ import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibility.svg";
+import logoImage from "../assets/png/smallLogo.png";
 
 function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -74,8 +75,11 @@ function SignUp() {
   return (
     <>
       <div className='pageContainer'>
-        <header className='regHeader'>
-          <p className='pageHeader'>Objednávky obědů</p>
+        <header className='signInHeader'>
+          <h1 className='pageHeader'>
+            <img src={logoImage} alt='logo' />
+            Objednávky obědů
+          </h1>
         </header>
 
         <main>

@@ -59,6 +59,10 @@ main {
   }
 }
 
+h1 {
+  font-weight: normal;
+}
+
 h4 {
   margin-top: 0;
   font-weight: normal;
@@ -107,6 +111,7 @@ h4 {
 
 .pageContainer header {
   display: flex;
+  justify-content: center;
 }
 
 @media (min-width: 1024px) {
@@ -148,6 +153,7 @@ h4 {
 }
 
 .pageHeader {
+  margin-top: 0;
   width: 100%;
   font-size: 1.3rem;
   text-align: center;
@@ -167,6 +173,14 @@ h4 {
   margin: 0 0 3rem;
   font-size: 1.5rem;
   font-weight: normal;
+}
+
+.signInHeader h1 img {
+  position: relative;
+  top: 3px;
+  left: 33px;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 @media (min-width: 1024px) {

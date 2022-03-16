@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
 import visibilityIcon from "../assets/svg/visibility.svg";
+import logoImage from "../assets/png/smallLogo.png";
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
@@ -46,7 +47,10 @@ function SignIn() {
     <>
       <div className='pageContainer'>
         <header className='signInHeader'>
-          <h1 className='pageHeader'>Objednávky obědů</h1>
+          <h1 className='pageHeader'>
+            <img src={logoImage} alt='logo' />
+            Objednávky obědů
+          </h1>
         </header>
 
         <main>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { toast } from "react-toastify";
 import { ReactComponent as ArrowRightIcon } from "../assets/svg/keyboardArrowRightIcon.svg";
+import logoImage from "../assets/png/smallLogo.png";
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -22,7 +23,10 @@ function ForgotPassword() {
   return (
     <div className='pageContainer'>
       <header className='signInHeader'>
-        <p className='pageHeader'>Objednávky obědů</p>
+        <h1 className='pageHeader'>
+          <img src={logoImage} alt='logo' />
+          Objednávky obědů
+        </h1>
       </header>
 
       <main>
