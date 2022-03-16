@@ -512,6 +512,14 @@ h4 {
   }
 }
 
+.mainSignInButton {
+  height: 3rem;
+}
+
+.editProfileButton {
+  height: 3rem;
+}
+
 /* View orders */
 
 .orderDate {
@@ -603,7 +611,7 @@ h4 {
   margin: 10px 0;
   padding: 0 50px;
   width: 100%;
-  height: 42px;
+  height: 3rem;
   border: 1px solid var(--border);
   border-radius: 5px;
   font-size: 0.8rem;
@@ -633,7 +641,7 @@ h4 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 34px;
+  height: 3rem;
   background: var(--blue);
   border-radius: 5px;
   color: var(--white);

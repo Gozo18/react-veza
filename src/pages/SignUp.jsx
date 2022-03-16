@@ -152,7 +152,7 @@ function SignUp() {
               </div>
 
               <div className='weekDayButtonBox'>
-                <button className='weekDayButton'>
+                <button className='weekDayButton mainSignInButton'>
                   Zaregistrovat
                   <ArrowRightIcon fill='#fff' width='34px' height='34px' />
                 </button>

@@ -117,7 +117,7 @@ function Profile() {
               onInput={(e) => (e.target.value = e.target.value.slice(0, 9))}
             />
             <div className='weekDayButtonBox'>
-              <button className='weekDayButton'>
+              <button className='weekDayButton editProfileButton'>
                 Upravit profil
                 <ArrowRightIcon fill='#fff' width='34px' height='34px' />
               </button>
@@ -136,7 +136,11 @@ function Profile() {
         )}
 
         <div className='adminLinkBox'>
-          <button type='button' className='logOut' onClick={onLogout}>
+          <button
+            type='button'
+            className='logOut editProfileButton'
+            onClick={onLogout}
+          >
             Odhlásit se
           </button>
         </div>

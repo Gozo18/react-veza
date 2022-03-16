@@ -81,7 +81,7 @@ function SignIn() {
               </div>
 
               <div className='weekDayButtonBox'>
-                <button className='weekDayButton'>
+                <button className='weekDayButton mainSignInButton'>
                   Přihlásit se
                   <ArrowRightIcon fill='#fff' width='34px' height='34px' />
                 </button>
