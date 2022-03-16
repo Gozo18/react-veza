@@ -1,14 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  collection,
-  query,
-  where,
-  getDocs,
-  doc,
-  getDoc,
-  Timestamp,
-  setDoc,
-} from "firebase/firestore";
+import { doc, getDoc, Timestamp, setDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { toast } from "react-toastify";
 import { getAuth } from "firebase/auth";
@@ -1125,10 +1116,6 @@ function Admin() {
         </header>
 
         <main>
-          {/* <div className='adminBox'>Počet objednávek: {numOr}</div>
-          <div className='adminBox'>Počet obědů: {sum}</div>
-          <div className='adminBox'>Počet uživatelů: {numUs}</div> */}
-
           <p>Načítám...</p>
         </main>
       </div>
