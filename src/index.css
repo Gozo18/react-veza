@@ -22,6 +22,27 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+@media (min-width: 1024px) {
+  ::-webkit-scrollbar {
+    width: 0.6em;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--white);
+    border-radius: 100vw;
+    margin-block: 0.1em;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--nav);
+    border-radius: 100vw;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--navActive);
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--bg);
@@ -327,7 +348,6 @@ h4 {
 .forgotPasswordLink {
   cursor: pointer;
   color: var(--main);
-  font-weight: 600;
   text-align: center;
 }
 
@@ -378,7 +398,6 @@ h4 {
 
 .registerLink {
   color: var(--main);
-  font-weight: 600;
   text-align: center;
 }
 
@@ -411,11 +430,9 @@ h4 {
   height: 34px;
   cursor: pointer;
   font-size: 0.8rem;
-  font-weight: bold;
   color: var(--white);
   background-color: var(--red);
   border-radius: 5px;
-  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
 }
 
 @media (min-width: 1024px) {
@@ -521,9 +538,7 @@ h4 {
   background-color: var(--main);
   border-radius: 5px;
   font-size: 0.8rem;
-  font-weight: bold;
   color: var(--white);
-  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
   cursor: pointer;
 }
 
@@ -582,7 +597,7 @@ h4 {
   justify-content: center;
   border: 1px solid var(--border);
   border-radius: 5px;
-  padding: 5px;
+  padding: 20px 10px;
   background: var(--white);
 }
 
@@ -666,9 +681,7 @@ h4 {
   background: var(--blue);
   border-radius: 5px;
   color: var(--white);
-  font-weight: bold;
   font-size: 0.8rem;
-  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 40%);
 }
 
 @media (min-width: 1024px) {
